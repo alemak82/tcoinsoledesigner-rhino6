@@ -1,0 +1,9 @@
+I nomi dei file (fatta eccezione per la goccia che è unica e non ha codice) sono così formati
+<tipo> "_" <codice> "_" <Dx/Sn> "_" <S/M/L> ".3dm" con tipo, codice e taglia codificate in IdAddiction.vb
+Cutout: "CutOut_" <Int/Ext> "_" <Dx/Sn> ".3dm"
+Ferro di cavallo: "FerroDiCavallo_" <Dx/Sn> ".3dm"
+
+Il file contiene un solo layer di nome "CurveScarichi" con le curve dello scarico visibili e non bloccate.
+A parte lo scarico cutout:
+Le curve si divisono concettualmente in 4 curve di base che sono parallele al piano XY e le curve superiori che non hanno vincoli
+Le curve di base devono essere non meno di 4 per via del commando "_NetworkSrf" usato per creare la superficie

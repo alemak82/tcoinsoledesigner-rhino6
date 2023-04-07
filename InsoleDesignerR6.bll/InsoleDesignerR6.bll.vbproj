@@ -1,0 +1,1161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CC5B4CD-216F-4731-8C6C-7CC400B84628}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InsoleDesigner.bll</RootNamespace>
+    <AssemblyName>InsoleDesignerR6.bll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,612,618</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,612,618</NoWarn>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonsUtils, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonsUtils.1.0.4\lib\CommonsUtils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=5.1.30000.12, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhino 6\System\RhinoCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino_DotNET_V4">
+      <HintPath>..\ExternalDependencies\Rhino_DotNET_V4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\IdElement3dManager.vb" />
+    <Compile Include="Controller\IdLanguageManager.vb" />
+    <Compile Include="Helper\IdAlias.vb" />
+    <Compile Include="Helper\IdDisplayConduit.vb" />
+    <Compile Include="Helper\IdGeometryUtils.vb" />
+    <Compile Include="Helper\ISerializable.vb" />
+    <Compile Include="Helper\UndoRedo\UndoRedoManager.vb" />
+    <Compile Include="Helper\UndoRedo\UndoRedoRecord.vb" />
+    <Compile Include="Library\LibraryManager.vb" />
+    <Compile Include="Model\Addiction\AbstractCutoutCommons.vb" />
+    <Compile Include="Model\Addiction\AbstractProjectableAddiction.vb" />
+    <Compile Include="Model\Addiction\ICutoutAddiction.vb" />
+    <Compile Include="Model\Addiction\IdAddiction.vb" />
+    <Compile Include="Model\Addiction\IdAddictionFactory.vb" />
+    <Compile Include="Model\Addiction\IdArchSupportAddiction.vb" />
+    <Compile Include="Model\Addiction\IdBaseAddiction.vb" />
+    <Compile Include="Model\Addiction\IdCutoutPartialAddiction.vb" />
+    <Compile Include="Model\Addiction\IdCutoutTotalAddiction.vb" />
+    <Compile Include="Model\Addiction\IdHorseShoePartialAddiction.vb" />
+    <Compile Include="Model\Addiction\IdHorseShoeTotalAddiction.vb" />
+    <Compile Include="Model\Addiction\IdMetbarAddiction.vb" />
+    <Compile Include="Model\Addiction\IPartialCutoutAddiction.vb" />
+    <Compile Include="Model\DTO\IdPatient.vb" />
+    <Compile Include="Model\DTO\IdTemplate.vb" />
+    <Compile Include="Model\PianiInclinati\AbstractPianiInclinati.vb" />
+    <Compile Include="Model\PianiInclinati\FactoryPianiInclinati.vb" />
+    <Compile Include="Model\PianiInclinati\PianoInclinatoElica.vb" />
+    <Compile Include="Model\PianiInclinati\PianoInclinatoPianta.vb" />
+    <Compile Include="Model\PianiInclinati\PianoInclinatoTallone.vb" />
+    <Compile Include="Model\PianiInclinati\PianoInclinatoTotale.vb" />
+    <Compile Include="Model\Pressure\DeformationTable.vb" />
+    <Compile Include="Model\Pressure\IdPressureMap.vb" />
+    <Compile Include="Model\Pressure\IdPressureMapUtils.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="UI\FrmProgress.Designer.vb">
+      <DependentUpon>FrmProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmProgress.vb" />
+    <Compile Include="UI\ProgressManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmProgress.en.resx">
+      <DependentUpon>FrmProgress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmProgress.resx">
+      <DependentUpon>FrmProgress.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Library\Addiction\BarraMetatarsale_3450_Dx_M.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3450_Dx_S.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3450_Sn_M.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3450_Sn_S.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3869_Dx_M.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3869_Sn_M.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3870_Dx_M.3dm" />
+    <None Include="Library\Addiction\BarraMetatarsale_3870_Sn_M.3dm" />
+    <None Include="Library\Addiction\CutOut_Ext_Dx.3dm" />
+    <None Include="Library\Addiction\CutOut_Ext_Sn.3dm" />
+    <None Include="Library\Addiction\CutOut_Int_Dx.3dm" />
+    <None Include="Library\Addiction\CutOut_Int_Sn.3dm" />
+    <None Include="Library\Addiction\FerroDiCavallo_Dx.3dm" />
+    <None Include="Library\Addiction\FerroDiCavallo_Sn.3dm" />
+    <None Include="Library\Addiction\Goccia_Dx_L.3dm" />
+    <None Include="Library\Addiction\Goccia_Dx_M.3dm" />
+    <None Include="Library\Addiction\Goccia_Dx_S.3dm" />
+    <None Include="Library\Addiction\Goccia_Sn_L.3dm" />
+    <None Include="Library\Addiction\Goccia_Sn_M.3dm" />
+    <None Include="Library\Addiction\Goccia_Sn_S.3dm" />
+    <None Include="Library\Addiction\Oliva_3423_Dx_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3423_Sn_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3435_Dx_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3435_Dx_S.3dm" />
+    <None Include="Library\Addiction\Oliva_3435_Sn_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3435_Sn_S.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Dx_L.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Dx_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Dx_S.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Sn_L.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Sn_M.3dm" />
+    <None Include="Library\Addiction\Oliva_3447_Sn_S.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Dx_L.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Dx_M.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Dx_S.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Sn_L.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Sn_M.3dm" />
+    <None Include="Library\Addiction\Oliva_6648_Sn_S.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Dx_L.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Dx_M.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Dx_S.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Sn_L.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Sn_M.3dm" />
+    <None Include="Library\Addiction\SupportoVolta_3030_Sn_S.3dm" />
+    <None Include="Library\DeformationTable\deformation table.01.csv" />
+    <None Include="Library\DeformationTable\deformation table.02.csv" />
+    <None Include="Library\DeformationTable\deformation table.03.csv" />
+    <None Include="Library\DeformationTable\deformation table.04.csv" />
+    <None Include="Library\DeformationTable\deformation table.05.csv" />
+    <None Include="Library\DeformationTable\deformation table.06.csv" />
+    <None Include="Library\DeformationTable\deformation table.07.csv" />
+    <None Include="Library\DeformationTable\deformation table.08.csv" />
+    <None Include="Library\DeformationTable\deformation table.09.csv" />
+    <None Include="Library\DeformationTable\deformation table.10.csv" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_34_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_35_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_36_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_37_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_38_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_39_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_40_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_41_T30.3dm" />
+    <None Include="Library\Last\Donna_STD\Donna_STD_T30\Serie forme\Donna_STD_42_T30.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_39.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_40.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_41.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_42.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_43.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_44.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_45 .3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_46.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T10\Serie forme\Uomo_STD_T10_47.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_39.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_40.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_41.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_42.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_43.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_44.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_45.3dm" />
+    <None Include="Library\Last\Uomo_STD\Uomo_STD_T25\Serie forme\Uomo_STD_T25_46.3dm" />
+    <None Include="Library\Ruler\RighelloXDx.3dm" />
+    <None Include="Library\Ruler\RighelloXSn.3dm" />
+    <None Include="Library\Ruler\RighelloYDx.3dm" />
+    <None Include="Library\Ruler\RighelloYSn.3dm" />
+    <None Include="Library\Ruler\RighelloZDx.3dm" />
+    <None Include="Library\Ruler\RighelloZSn.3dm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_34.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_35.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_36.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_37.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_38.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_39.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_40.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_41.dfm" />
+    <None Include="Library\TcoProfile\ALTEA T30 C10 - C2018335\dfm\C2018335_AlteaC10T30_42.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_21.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_22.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_23.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_24.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_25.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_26.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_27.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_28.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_29.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_30.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_31.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_32.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_33.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_34.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_35.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_36.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_37.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_38.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_39.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_40.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_41.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_42.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_43.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_44.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_45.dfm" />
+    <None Include="Library\TcoProfile\DINAMIS BASSA C2098936\dfm\C2098936_Dinamis_46.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_34.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_35.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_36.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_37.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_38.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_39.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_40.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_41.dfm" />
+    <None Include="Library\TcoProfile\MORA T30 C11 - C2097797\dfm\C2097797_MoraC11T30_42.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_38.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_39.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_40.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_41.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_42.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_43.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_44.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_45.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_46.dfm" />
+    <None Include="Library\TcoProfile\Omar_C11_ C2083758\dfm\C2083758_OmarC11_47.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_37.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_38.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_39.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_40.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_41.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_42.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_43.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_44.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_45.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_46.dfm" />
+    <None Include="Library\TcoProfile\Saul_C11_C2092777\dfm\C2092777_SaulC11_47.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_18.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_19.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_20.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_21.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_22.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_23.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_24.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_25.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_26.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_27.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_28.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_29.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_30.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_31.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_32.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_33.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_34.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_35.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_36.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_37.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_38.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_39.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_40.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_41.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_42.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_43.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_44.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_45.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_46.dfm" />
+    <None Include="Library\TcoProfile\SPORT_Alta_C7_H52396\dfm\H52396_Sport_47.dfm" />
+    <None Include="Library\Template\Static\00d8a777-ae0a-45dc-82b0-ecd085745a5a.igs" />
+    <None Include="Library\Template\Static\0119201c-55a1-49fb-8b3e-251cb288b48d.igs" />
+    <None Include="Library\Template\Static\01686960-3f9c-4d98-9dd0-1fbdc54f20f9.igs" />
+    <None Include="Library\Template\Static\01af50dc-69e9-4f39-8950-4f70b07b1aea.igs" />
+    <None Include="Library\Template\Static\01bdfd43-b784-48b3-b740-3d9f88a2dac5.igs" />
+    <None Include="Library\Template\Static\02159b44-7258-4ab9-8ccc-410ebd3b7f78.igs" />
+    <None Include="Library\Template\Static\0254b87a-ec17-4990-a35b-2c0190ac32d0.igs" />
+    <None Include="Library\Template\Static\02615004-877d-47a7-9477-484d332177ab.igs" />
+    <None Include="Library\Template\Static\0287b65a-66be-4d4f-a200-d75f90127f52.igs" />
+    <None Include="Library\Template\Static\02fa8fa1-24ff-4a04-85c9-b5b3586539b8.igs" />
+    <None Include="Library\Template\Static\037d2480-4c6e-4f2b-93ea-ed7717548a41.igs" />
+    <None Include="Library\Template\Static\03f788a1-e969-4b46-8b87-18b7f6ffee0e.igs" />
+    <None Include="Library\Template\Static\04db4233-6835-4ed9-b2f1-448b64147cec.igs" />
+    <None Include="Library\Template\Static\058a92d5-ab84-42a3-a76a-dde81c461dc6.igs" />
+    <None Include="Library\Template\Static\059cd723-b733-44de-8c04-46a4fc6b0286.igs" />
+    <None Include="Library\Template\Static\05a235c4-2ff5-4ab7-b74d-4e2ab9bc1361.igs" />
+    <None Include="Library\Template\Static\05f12d09-b30f-4b4f-9efd-ff2f390eaa87.igs" />
+    <None Include="Library\Template\Static\06258481-cb3b-452a-a04f-69c1ad939334.igs" />
+    <None Include="Library\Template\Static\0638ce3e-338f-42f0-a2a8-088319a39406.igs" />
+    <None Include="Library\Template\Static\065c652e-658c-46be-895b-bc10b06a13a3.igs" />
+    <None Include="Library\Template\Static\06bfc716-db1a-4225-a0e6-f9e7e7434a09.igs" />
+    <None Include="Library\Template\Static\06f4c4eb-64e9-420e-8288-f31c927b93e2.igs" />
+    <None Include="Library\Template\Static\072755b0-a92f-493a-9b4a-c1e05e2548af.igs" />
+    <None Include="Library\Template\Static\07703cb6-2cd3-4c13-ac66-a13076d7517d.igs" />
+    <None Include="Library\Template\Static\07cb1e9a-3612-4941-a157-1713de03d6a9.igs" />
+    <None Include="Library\Template\Static\07fcaf80-7c29-4615-9c9c-ba31e3f49c0d.igs" />
+    <None Include="Library\Template\Static\08186988-f7e3-4fc3-a6b1-830e78340a66.igs" />
+    <None Include="Library\Template\Static\082c29bf-7b72-4b68-906f-4d930cac745f.igs" />
+    <None Include="Library\Template\Static\088c35fa-22fc-4d61-80ed-36f6accc1d92.igs" />
+    <None Include="Library\Template\Static\08966c6a-b7f0-4b69-a6e2-4aa4a19d5e79.igs" />
+    <None Include="Library\Template\Static\08fd6f08-f3ac-478a-b5a7-a569ad9ccc23.igs" />
+    <None Include="Library\Template\Static\09a3428a-84ee-4a11-bfca-e0252fcaa50f.igs" />
+    <None Include="Library\Template\Static\09de7d92-e352-4cd2-b076-efd3ce661671.igs" />
+    <None Include="Library\Template\Static\0a561056-f063-4bdb-9554-15d38b8fe442.igs" />
+    <None Include="Library\Template\Static\0ac60424-856f-4168-885e-ea9d2c484d65.igs" />
+    <None Include="Library\Template\Static\0b689b78-ab7e-4352-9f56-ea8673dfe562.igs" />
+    <None Include="Library\Template\Static\0b9e8f12-9527-4297-aa47-aec61b917949.igs" />
+    <None Include="Library\Template\Static\0bba26de-fbd6-493a-abb3-af7270b3c423.igs" />
+    <None Include="Library\Template\Static\0bde8d4d-62ff-4243-acbf-48f8408c1de7.igs" />
+    <None Include="Library\Template\Static\0be25a11-47ad-40de-b2e3-055ea425cb83.igs" />
+    <None Include="Library\Template\Static\0bf74497-6363-48ec-9c46-c3fbc52a67ff.igs" />
+    <None Include="Library\Template\Static\0cc9f474-b39f-4ae1-89dc-829ebb56736a.igs" />
+    <None Include="Library\Template\Static\0d7e4979-fb76-4f84-b562-2d1904fc817a.igs" />
+    <None Include="Library\Template\Static\0dc1062d-5366-4f7b-befe-bf8dd32cfba6.igs" />
+    <None Include="Library\Template\Static\0debb174-5f1c-4b00-986d-3d3be6bde10e.igs" />
+    <None Include="Library\Template\Static\0e97829b-021d-4cc2-823e-c2013c5573e3.igs" />
+    <None Include="Library\Template\Static\0ec562c7-ff33-4b35-96d9-a61eea6f623d.igs" />
+    <None Include="Library\Template\Static\0ef1d625-89bc-4728-8e65-3f6dcfcc66ff.igs" />
+    <None Include="Library\Template\Static\0f0f7d38-ff92-4fdf-91bd-b9ac32a0a1ac.igs" />
+    <None Include="Library\Template\Static\100549fb-0e49-4e10-8ff5-5a2176c5d949.igs" />
+    <None Include="Library\Template\Static\1014df13-1257-4ae0-9816-41daf0e755ee.igs" />
+    <None Include="Library\Template\Static\10315caf-494e-4f59-955a-50975e959153.igs" />
+    <None Include="Library\Template\Static\103da048-6d18-4024-a931-49c604ef152d.igs" />
+    <None Include="Library\Template\Static\1047472a-30a6-4e1c-a2c0-68a1d1583af8.igs" />
+    <None Include="Library\Template\Static\10637699-a193-446c-b8d2-bf53962650d5.igs" />
+    <None Include="Library\Template\Static\107f12cc-cf37-4224-b94e-e8fdf026db7d.igs" />
+    <None Include="Library\Template\Static\11f4215d-ab40-4e21-a131-277bec5141ae.igs" />
+    <None Include="Library\Template\Static\12738b0a-6322-4c5e-a9ab-e4aa737466d8.igs" />
+    <None Include="Library\Template\Static\128f06ff-341e-4736-b47b-5a9bd362082d.igs" />
+    <None Include="Library\Template\Static\12abc079-1c50-4c77-8fc5-9ee828f3c513.igs" />
+    <None Include="Library\Template\Static\12b4e0ab-0eb4-4dfa-a8e6-3d9e9100bc54.igs" />
+    <None Include="Library\Template\Static\12eef73a-8518-404e-963a-5a594cf9369e.igs" />
+    <None Include="Library\Template\Static\13148980-44c5-45c9-abe2-c844688d04cc.igs" />
+    <None Include="Library\Template\Static\136f3bca-9fc0-4483-a419-dab0a9b5f549.igs" />
+    <None Include="Library\Template\Static\13977014-c953-464f-bafa-498cc58e1626.igs" />
+    <None Include="Library\Template\Static\1421ada0-d020-4b37-bc98-08dc4be45e26.igs" />
+    <None Include="Library\Template\Static\1456b6d4-cced-475d-aecf-64e807072972.igs" />
+    <None Include="Library\Template\Static\14575f8e-21ca-4506-a305-122317eaab85.igs" />
+    <None Include="Library\Template\Static\159818ad-484a-4672-9bae-186e132460fe.igs" />
+    <None Include="Library\Template\Static\15c97c3e-f255-4fe0-b8bc-31c4fb511cf5.igs" />
+    <None Include="Library\Template\Static\166a2ac8-86d1-4815-8656-9e685f40f545.igs" />
+    <None Include="Library\Template\Static\16a39663-40d4-40de-8fb9-6fb520b95359.igs" />
+    <None Include="Library\Template\Static\172ca492-4a07-40e3-813d-e6dcfc4efb87.igs" />
+    <None Include="Library\Template\Static\179d7b3b-16c6-48a7-a24c-2ff2b47cb131.igs" />
+    <None Include="Library\Template\Static\18590055-f9a3-4571-9fc7-e436027d974d.igs" />
+    <None Include="Library\Template\Static\19351413-04e1-476a-a4fc-3153c61c6fc4.igs" />
+    <None Include="Library\Template\Static\1a025bf9-b5fa-4648-8efb-3b0de6b624e9.igs" />
+    <None Include="Library\Template\Static\1a0c5b59-c29d-4d70-affb-30dbfff8835e.igs" />
+    <None Include="Library\Template\Static\1a3da982-fe3b-4975-94e1-8896aacbf52f.igs" />
+    <None Include="Library\Template\Static\1b7b56b1-f46d-4c5e-b6da-e8bffb04cd59.igs" />
+    <None Include="Library\Template\Static\1b8891e6-b69b-452f-97bb-16f1381a29d4.igs" />
+    <None Include="Library\Template\Static\1bb52a4a-5be2-4c3d-9a97-da52efdc9607.igs" />
+    <None Include="Library\Template\Static\1c120c91-ff53-4cba-bdaa-5c14b903010c.igs" />
+    <None Include="Library\Template\Static\1d201c4f-4d15-4935-b170-a10370b5f5d6.igs" />
+    <None Include="Library\Template\Static\1da3439a-215e-43ea-8b4e-fe350fa11cda.igs" />
+    <None Include="Library\Template\Static\1dcca08f-2c32-46eb-8fd1-a75bd6f72c9a.igs" />
+    <None Include="Library\Template\Static\1e227517-8521-4b99-a3ef-4aa31ee9ba56.igs" />
+    <None Include="Library\Template\Static\1fee120f-599a-46bf-86d3-480fc6be4df5.igs" />
+    <None Include="Library\Template\Static\203e7728-7a76-4762-bd31-441a58d90ca0.igs" />
+    <None Include="Library\Template\Static\20edf3a7-1d7c-4f1a-909c-c1d79fa1554d.igs" />
+    <None Include="Library\Template\Static\214e61e2-02e6-4791-a7a5-b4e6743f2dfb.igs" />
+    <None Include="Library\Template\Static\21603cee-044b-4474-9ea0-295a8c74240b.igs" />
+    <None Include="Library\Template\Static\21b56669-4dd7-45c4-b29b-f65f3fd37e12.igs" />
+    <None Include="Library\Template\Static\2230f5cc-0827-4bc8-85eb-8b1a74a4e257.igs" />
+    <None Include="Library\Template\Static\2239a9d3-fefa-4c05-b5f1-524150541793.igs" />
+    <None Include="Library\Template\Static\22403ddf-4b07-4743-ad9f-b4064b9f0eb2.igs" />
+    <None Include="Library\Template\Static\227aba06-5823-47c2-9267-bec95b31e1d0.igs" />
+    <None Include="Library\Template\Static\229f687b-6e31-48ac-b048-16e5eb813d8e.igs" />
+    <None Include="Library\Template\Static\22a0777b-258a-49bc-aafd-0c89553be293.igs" />
+    <None Include="Library\Template\Static\22a56259-9d15-45e8-ae18-7bd21ce506f9.igs" />
+    <None Include="Library\Template\Static\22dc6e87-cbf6-4d96-80e9-4edfc326afc3.igs" />
+    <None Include="Library\Template\Static\23a0308f-aa6f-4f9a-a7b1-eaee0b6df880.igs" />
+    <None Include="Library\Template\Static\23a1df1e-4b51-4a60-a32c-6271486d040d.igs" />
+    <None Include="Library\Template\Static\2414e18e-3cf8-44de-bf6f-f7d24ccd5456.igs" />
+    <None Include="Library\Template\Static\243339f3-ee08-4dcc-99f2-a8b35cf0a32a.igs" />
+    <None Include="Library\Template\Static\251fe29d-a597-41a9-b28d-b737a472922f.igs" />
+    <None Include="Library\Template\Static\25259c3f-2ed0-44ee-8285-8ed1a6d83614.igs" />
+    <None Include="Library\Template\Static\254a0182-d341-4a03-b327-2eb7e30d620e.igs" />
+    <None Include="Library\Template\Static\2566072d-af07-40d8-a075-4871c9d4b4bb.igs" />
+    <None Include="Library\Template\Static\25925be4-3485-4575-ab70-aa22c2f67494.igs" />
+    <None Include="Library\Template\Static\25d75d8b-3168-4ab7-84d5-a020344f4232.igs" />
+    <None Include="Library\Template\Static\26ab3323-e92a-42bb-b87e-b9195128026e.igs" />
+    <None Include="Library\Template\Static\26c916e7-4497-4f15-b502-fe68b16d2ab2.igs" />
+    <None Include="Library\Template\Static\26fc2996-d160-47e4-b4dc-f325c73a942c.igs" />
+    <None Include="Library\Template\Static\271ce583-73b6-4a81-ab2a-5facb869ac38.igs" />
+    <None Include="Library\Template\Static\276de58e-2b36-4b30-8034-f62c0282b424.igs" />
+    <None Include="Library\Template\Static\27b55452-fd6a-4d23-9db9-f8718b74ddf0.igs" />
+    <None Include="Library\Template\Static\2860c8f4-e489-468c-96f5-596ac6cefcd1.igs" />
+    <None Include="Library\Template\Static\287388b5-2b63-4cc3-9532-84ae8b47130b.igs" />
+    <None Include="Library\Template\Static\292a4c53-dea9-4a86-a50f-7ce32f94b81c.igs" />
+    <None Include="Library\Template\Static\293f7816-5891-4329-aad6-e35d92f61007.igs" />
+    <None Include="Library\Template\Static\29776be6-b748-4135-9940-6324e8806f85.igs" />
+    <None Include="Library\Template\Static\29c44d4b-6f15-4ba3-8ec1-50be3860dc9f.igs" />
+    <None Include="Library\Template\Static\29e7516a-401c-4aed-b946-5d141f41aaaf.igs" />
+    <None Include="Library\Template\Static\2bed6847-73b4-4180-8099-b22d015a988d.igs" />
+    <None Include="Library\Template\Static\2c589cac-1182-4cda-95ed-e53617e33f66.igs" />
+    <None Include="Library\Template\Static\2c7b6898-6589-4030-bbc7-788f09de76ea.igs" />
+    <None Include="Library\Template\Static\2cb9af12-363e-4338-b0a8-e24fe61fea26.igs" />
+    <None Include="Library\Template\Static\2cf81aeb-7f03-48a5-9d7b-7582ebc9c7ff.igs" />
+    <None Include="Library\Template\Static\2d38ef05-3b7a-43d1-9873-62391d776366.igs" />
+    <None Include="Library\Template\Static\2d6d5172-f9f4-4579-9bd3-a2e08d05a441.igs" />
+    <None Include="Library\Template\Static\2d6f99c2-a3f2-45e3-938e-ee4b57b0ce9d.igs" />
+    <None Include="Library\Template\Static\2d846138-9fca-4031-a358-20bccf458256.igs" />
+    <None Include="Library\Template\Static\2e11421f-888b-4d55-81ea-cb955acfcfde.igs" />
+    <None Include="Library\Template\Static\2e32937f-abeb-45c8-8020-3b94e9aad8a2.igs" />
+    <None Include="Library\Template\Static\2eac5803-82d2-4827-b7d7-725efca5a04a.igs" />
+    <None Include="Library\Template\Static\2f1874cd-addb-48e0-90cf-1d2f2b3bd0f2.igs" />
+    <None Include="Library\Template\Static\30036979-caef-47ce-acd9-e4a928315ee7.igs" />
+    <None Include="Library\Template\Static\300eac7d-8b50-4a6b-8cf4-42d7f93296b0.igs" />
+    <None Include="Library\Template\Static\30117f53-99e2-435d-a48d-ec098a1502eb.igs" />
+    <None Include="Library\Template\Static\3042119d-2d7f-4bc4-8504-00455fce8162.igs" />
+    <None Include="Library\Template\Static\30db49f1-a6b5-4dd9-854b-7bff96a335ba.igs" />
+    <None Include="Library\Template\Static\3158535a-4bfe-4c4f-831d-59b98c8dc59d.igs" />
+    <None Include="Library\Template\Static\31a59cd5-4dd2-4f48-af8b-115ffd3a9356.igs" />
+    <None Include="Library\Template\Static\31a63893-3d0e-4143-b08a-04443b167996.igs" />
+    <None Include="Library\Template\Static\31afe53a-6a51-4480-8754-b9b61a15ee84.igs" />
+    <None Include="Library\Template\Static\3214ff6e-fddd-4881-a35a-436f074462e8.igs" />
+    <None Include="Library\Template\Static\322d20b2-c5f7-46d3-bf60-13cdb4cd6049.igs" />
+    <None Include="Library\Template\Static\329ebe19-0517-45fb-9f7e-3fcc7b2d752f.igs" />
+    <None Include="Library\Template\Static\3336fa74-a612-4164-87f2-b310d961c8d7.igs" />
+    <None Include="Library\Template\Static\3372fb45-24cf-4c0d-91b5-fccc2bf4bf42.igs" />
+    <None Include="Library\Template\Static\33c008bb-0bbe-4a36-91bd-9fdd50c9aa1a.igs" />
+    <None Include="Library\Template\Static\33f403da-c4df-4f33-a5a2-8ded9367bd5d.igs" />
+    <None Include="Library\Template\Static\341918c5-6b1e-4058-b4ea-e9b22e6bd390.igs" />
+    <None Include="Library\Template\Static\34457546-fda5-4d6e-8d69-74a06a1c7d1a.igs" />
+    <None Include="Library\Template\Static\346e9e32-e030-469b-8550-b57832e6e2d3.igs" />
+    <None Include="Library\Template\Static\34dddaa4-f451-43a2-a051-4e67396531c2.igs" />
+    <None Include="Library\Template\Static\3639170a-34fa-4622-a32a-5b9903fb36bc.igs" />
+    <None Include="Library\Template\Static\366a90c0-ff40-441a-a56d-469a1d50f32b.igs" />
+    <None Include="Library\Template\Static\366ff031-ca63-4b93-981a-786c01b68294.igs" />
+    <None Include="Library\Template\Static\36896af6-cdf2-4734-a3bd-c79868d70477.igs" />
+    <None Include="Library\Template\Static\37997b94-7dbc-49fc-a2cd-f6ab536ee929.igs" />
+    <None Include="Library\Template\Static\38386fc1-127e-4ae8-863c-6a080675f625.igs" />
+    <None Include="Library\Template\Static\383d603d-3f84-4b19-97af-a9b56b4c2c7d.igs" />
+    <None Include="Library\Template\Static\387a2a8b-4ef2-4756-8ae0-9869c887e2f4.igs" />
+    <None Include="Library\Template\Static\389d7517-8a53-419d-9c1d-7a6278e02be1.igs" />
+    <None Include="Library\Template\Static\390b76da-68e3-4a0f-be50-c3ccf3a83139.igs" />
+    <None Include="Library\Template\Static\394aea1c-508c-493e-80f5-e9e0868f2275.igs" />
+    <None Include="Library\Template\Static\3991ff0f-0c84-42aa-9b6a-6c775587a5ba.igs" />
+    <None Include="Library\Template\Static\39af5640-7d89-4031-b709-1ac1500d8c5b.igs" />
+    <None Include="Library\Template\Static\39c7f00e-8231-42aa-b88f-d744240691b2.igs" />
+    <None Include="Library\Template\Static\3a2e90fe-b5e6-4946-8103-5b8c58f9d15f.igs" />
+    <None Include="Library\Template\Static\3a81a73f-3a6a-46fa-9e1b-bce15dec5c7a.igs" />
+    <None Include="Library\Template\Static\3a93d2ac-de35-476f-9342-c5961cf5aa66.igs" />
+    <None Include="Library\Template\Static\3a960444-0a9a-46be-84e9-92706b48fb2c.igs" />
+    <None Include="Library\Template\Static\3ac361d4-e179-44fb-a2da-2e3730d5e5e2.igs" />
+    <None Include="Library\Template\Static\3b7eb979-88e3-4e0d-8df9-428f4036f8ab.igs" />
+    <None Include="Library\Template\Static\3c0c071d-112f-4b6b-80a1-691cf2c3e407.igs" />
+    <None Include="Library\Template\Static\3c3e8f5e-c457-4132-9263-127b0497b7e5.igs" />
+    <None Include="Library\Template\Static\3c99c1ec-a29e-4734-aa18-360deb2465e0.igs" />
+    <None Include="Library\Template\Static\3d6b387e-1396-4054-a1e5-536645d8e225.igs" />
+    <None Include="Library\Template\Static\3db87f39-c2f9-475f-87d6-3ff623bc8688.igs" />
+    <None Include="Library\Template\Static\3dede966-fa83-47e0-91a9-94c94def665c.igs" />
+    <None Include="Library\Template\Static\3e05c0ef-8dde-4e85-910a-2bd9646feb9a.igs" />
+    <None Include="Library\Template\Static\3e781f6c-fe03-4287-987d-8f6219b5b4f2.igs" />
+    <None Include="Library\Template\Static\3eba337a-3335-4a2a-861b-e1bc2f614d59.igs" />
+    <None Include="Library\Template\Static\3ebc9a83-eca8-4a29-86f1-de2499d6e833.igs" />
+    <None Include="Library\Template\Static\3f2c9318-22f5-47eb-a02f-0858321e989e.igs" />
+    <None Include="Library\Template\Static\3f409579-adb8-4b1e-b617-f8f9d41f190c.igs" />
+    <None Include="Library\Template\Static\3f9d58ee-577f-49c2-8dce-89870de9e2d6.igs" />
+    <None Include="Library\Template\Static\3fdf0e0c-1d97-4875-82e7-6d8ee0cf1ae9.igs" />
+    <None Include="Library\Template\Static\400ea8bd-4e13-46d1-af21-25141f470398.igs" />
+    <None Include="Library\Template\Static\4114801e-71a7-45cd-bdf7-132bbf11fc00.igs" />
+    <None Include="Library\Template\Static\41a3c0ab-2dac-46a3-950a-b22fbcde1230.igs" />
+    <None Include="Library\Template\Static\421b9548-7b35-469c-adff-21beef246efa.igs" />
+    <None Include="Library\Template\Static\421f166e-1e98-4c6b-a6ec-4b94089ef767.igs" />
+    <None Include="Library\Template\Static\4285118b-1b92-4ad8-aeb4-a7f5af177e70.igs" />
+    <None Include="Library\Template\Static\4302902d-8eba-41ce-a986-beb33e4ce728.igs" />
+    <None Include="Library\Template\Static\43a57b88-bea2-4b1d-956e-93bc6fc070b7.igs" />
+    <None Include="Library\Template\Static\43d60db8-f9ab-4e20-90ea-923ca9538b60.igs" />
+    <None Include="Library\Template\Static\43d9c4e5-c400-4492-ad44-014ef815fe38.igs" />
+    <None Include="Library\Template\Static\44b5c591-c1f1-4980-8ef8-cfa249536235.igs" />
+    <None Include="Library\Template\Static\455b7e85-1bd6-4c29-8c2d-7240fb2a17a6.igs" />
+    <None Include="Library\Template\Static\457ed284-435e-4c1b-b006-591a63b54393.igs" />
+    <None Include="Library\Template\Static\46341047-2a22-431d-9986-48c1ed27c2fa.igs" />
+    <None Include="Library\Template\Static\46605740-286b-4c09-8102-cefd7c7cbf74.igs" />
+    <None Include="Library\Template\Static\46f56272-d250-4a54-b41d-845d30b8abc1.igs" />
+    <None Include="Library\Template\Static\4707975b-2282-4c64-9c33-0185ffc82e7f.igs" />
+    <None Include="Library\Template\Static\472d2ae1-e003-47d8-846b-1fd8113567d6.igs" />
+    <None Include="Library\Template\Static\4816a362-f9ad-43aa-b8a0-a0860f9ba8d1.igs" />
+    <None Include="Library\Template\Static\482f5d8f-7e2c-4cdb-98cc-f3408eaf37ce.igs" />
+    <None Include="Library\Template\Static\4830737a-4f7d-496a-b4c0-28c00a83513b.igs" />
+    <None Include="Library\Template\Static\4856a105-5d31-4c70-ab92-a31341c2baa3.igs" />
+    <None Include="Library\Template\Static\48776843-d056-4378-bd56-0a0b16b95ff9.igs" />
+    <None Include="Library\Template\Static\496b04b2-5a8e-4148-911a-b70e42a98a1f.igs" />
+    <None Include="Library\Template\Static\49c174fd-f02b-4b39-a868-92ee81283e18.igs" />
+    <None Include="Library\Template\Static\49f4cf13-8237-43e9-a3b4-d82c27196f02.igs" />
+    <None Include="Library\Template\Static\4ac40a7f-7c45-4b4f-b524-f4fe441a0f69.igs" />
+    <None Include="Library\Template\Static\4ac9a057-3017-4949-a3f0-160c1680687e.igs" />
+    <None Include="Library\Template\Static\4b5ffca6-093f-447c-8760-8a2bd827dd05.igs" />
+    <None Include="Library\Template\Static\4ba0c86e-77df-4040-ad10-d785387f56bd.igs" />
+    <None Include="Library\Template\Static\4bf342e8-ee90-49d6-95cb-57025f13eff1.igs" />
+    <None Include="Library\Template\Static\4c038ba0-b4b8-4a9b-90be-224b9ccb2727.igs" />
+    <None Include="Library\Template\Static\4c38cb80-58fa-4b1b-9e0b-340d4b48b02f.igs" />
+    <None Include="Library\Template\Static\4c4e5ec7-ffaa-48f7-acc6-d0315e112a9e.igs" />
+    <None Include="Library\Template\Static\4c8f1ce6-d21c-49cf-acf3-5a091697c492.igs" />
+    <None Include="Library\Template\Static\4d2d5649-0886-4bf3-bd60-d487e261a62e.igs" />
+    <None Include="Library\Template\Static\4d76f175-126a-4b7b-aa5b-c4f83a4d23ca.igs" />
+    <None Include="Library\Template\Static\4d968a18-44e7-4ed3-8894-f5f9dd2e6489.igs" />
+    <None Include="Library\Template\Static\4f1d8c20-6f96-46f0-a778-6b34d14bfb5f.igs" />
+    <None Include="Library\Template\Static\4f3033ac-a415-480a-b88b-15ad5170780f.igs" />
+    <None Include="Library\Template\Static\4f36e931-4020-486c-b6e8-86bf4460d630.igs" />
+    <None Include="Library\Template\Static\4fdd6fbb-bfa0-4771-8606-09ce70e0ca1b.igs" />
+    <None Include="Library\Template\Static\502d0490-6a98-4689-8f2b-64c80b7a0c1a.igs" />
+    <None Include="Library\Template\Static\50a2eadb-e312-4d8b-b863-7b98f1a65d13.igs" />
+    <None Include="Library\Template\Static\50ac851f-9506-47b0-bccc-4914e9df8d10.igs" />
+    <None Include="Library\Template\Static\50b2216b-5f1b-4002-986c-7716c94762ba.igs" />
+    <None Include="Library\Template\Static\511bb36b-8dc5-4fcc-837e-b481d7575d8d.igs" />
+    <None Include="Library\Template\Static\51952ff0-cae4-4e9c-95db-b77a5851da57.igs" />
+    <None Include="Library\Template\Static\5257cb90-1bde-4be4-85dd-2350c391102a.igs" />
+    <None Include="Library\Template\Static\52ad282a-03c7-4289-9752-c0263ae2d272.igs" />
+    <None Include="Library\Template\Static\530f8a23-1350-4b48-ae29-edd69aa24c6f.igs" />
+    <None Include="Library\Template\Static\5461287e-1cb3-4288-8e96-0b50434dfa25.igs" />
+    <None Include="Library\Template\Static\548efa96-4903-45f2-9211-38a7bed1253e.igs" />
+    <None Include="Library\Template\Static\55021f9c-e958-4db4-95d4-214975c3481c.igs" />
+    <None Include="Library\Template\Static\55bcc0ca-404e-440c-b610-6b1c6ac8236e.igs" />
+    <None Include="Library\Template\Static\561cd3be-fb70-47ae-b060-c632b150a7e3.igs" />
+    <None Include="Library\Template\Static\56648c31-cec2-458a-8fae-b7a7c5b5b9ff.igs" />
+    <None Include="Library\Template\Static\57194b90-5885-4ada-88a3-00575c80971e.igs" />
+    <None Include="Library\Template\Static\578fd826-8706-4763-aafb-d1e2cafed1fd.igs" />
+    <None Include="Library\Template\Static\5838da00-7d76-4f35-841f-c0ace507b9de.igs" />
+    <None Include="Library\Template\Static\58df4b2e-2163-491c-b76d-0bdf227241bc.igs" />
+    <None Include="Library\Template\Static\58e020d2-65fc-4735-be5b-984522cf9f52.igs" />
+    <None Include="Library\Template\Static\58feadf7-e87c-484e-b0ed-3fb615ca2760.igs" />
+    <None Include="Library\Template\Static\592e04a7-94fe-42ab-bc35-bdf8c6a6d864.igs" />
+    <None Include="Library\Template\Static\596c9242-5e4b-4af7-b094-14643345ae0b.igs" />
+    <None Include="Library\Template\Static\59c7436f-08ee-4785-8482-0220ef054967.igs" />
+    <None Include="Library\Template\Static\59ede04a-0ef4-4094-8231-ac9f5e1d0487.igs" />
+    <None Include="Library\Template\Static\5b04755e-40ec-4335-9577-4c3899aa94fb.igs" />
+    <None Include="Library\Template\Static\5b139460-6484-41e0-be13-e439b371a6ed.igs" />
+    <None Include="Library\Template\Static\5bbc1821-ae73-487b-947f-0f5d517e2e37.igs" />
+    <None Include="Library\Template\Static\5cd969d0-2c4c-4203-9754-df2cc3d54489.igs" />
+    <None Include="Library\Template\Static\5ce538a2-9cb3-4aa0-8a18-eccbf0c0a7d6.igs" />
+    <None Include="Library\Template\Static\5cf73066-5097-42f9-9ac3-64737b01236e.igs" />
+    <None Include="Library\Template\Static\5e839d2b-5870-41b6-8280-8f3d73e207de.igs" />
+    <None Include="Library\Template\Static\5e8f678e-bb93-4593-9be9-13b0c9aa9243.igs" />
+    <None Include="Library\Template\Static\5f0cfda2-6989-4de9-abc3-deb1e72bda07.igs" />
+    <None Include="Library\Template\Static\5faebcea-2f76-4a93-95ce-956f9ac5d298.igs" />
+    <None Include="Library\Template\Static\602ceabb-3483-4cb0-957c-04c06646aaa9.igs" />
+    <None Include="Library\Template\Static\6035525b-f9be-4d39-bcdd-676766acf6dc.igs" />
+    <None Include="Library\Template\Static\60bf8dfb-9dc8-4396-807e-54905a704f0a.igs" />
+    <None Include="Library\Template\Static\60ff59bb-5f6b-418e-961b-821706c5db46.igs" />
+    <None Include="Library\Template\Static\6121b025-3f68-470f-9481-26bfd2ac2f5a.igs" />
+    <None Include="Library\Template\Static\617f3b06-1421-48d6-841a-d76f65738f25.igs" />
+    <None Include="Library\Template\Static\6198cb79-eb11-498b-9773-ee74d9dbcdc9.igs" />
+    <None Include="Library\Template\Static\61ae70ae-c2ef-4c0b-9261-4f48561dfaa4.igs" />
+    <None Include="Library\Template\Static\6216904d-3956-436f-9683-938563347a23.igs" />
+    <None Include="Library\Template\Static\6236f259-b1ba-440f-ada0-c799714a148f.igs" />
+    <None Include="Library\Template\Static\62b7b5ce-ae00-4fdc-a158-59427edf4505.igs" />
+    <None Include="Library\Template\Static\62ed45ae-3d57-48a8-9fd1-01d2985d1815.igs" />
+    <None Include="Library\Template\Static\6302bfd1-ef3a-4963-b010-89f3ef4a975a.igs" />
+    <None Include="Library\Template\Static\633862e0-c85e-4bcc-8efd-1084917be2d8.igs" />
+    <None Include="Library\Template\Static\636da6f3-2da3-4d9b-946a-446be35e14d1.igs" />
+    <None Include="Library\Template\Static\63849f78-7bdb-4397-8aa3-ed32b6e6e01e.igs" />
+    <None Include="Library\Template\Static\63a2fc7a-70a3-44aa-9288-2910b7ad6d8e.igs" />
+    <None Include="Library\Template\Static\643c823b-f915-4e19-b89e-d8e73c3b95aa.igs" />
+    <None Include="Library\Template\Static\6472a23c-7ecb-44e0-8281-53b45db1f83c.igs" />
+    <None Include="Library\Template\Static\64c9b218-bd5e-48b8-8270-4f27e28f1250.igs" />
+    <None Include="Library\Template\Static\64e216e1-68e4-4b2c-be3c-6c24fdea7428.igs" />
+    <None Include="Library\Template\Static\6575dbe3-802a-49ce-9265-a61d7dadb418.igs" />
+    <None Include="Library\Template\Static\658ce3d4-d9d7-43fd-bff2-2c9ae4691174.igs" />
+    <None Include="Library\Template\Static\65a2cfa2-2e6d-4ccb-8cfe-e0aba57185da.igs" />
+    <None Include="Library\Template\Static\65e01b60-0a74-4700-9fe9-beff38f76eb6.igs" />
+    <None Include="Library\Template\Static\65ec9e88-8ac2-451f-b7a5-4feb953d6b7c.igs" />
+    <None Include="Library\Template\Static\65f344a2-e0cf-4c0b-bee5-645e0997277e.igs" />
+    <None Include="Library\Template\Static\678a6a5a-18e5-4188-baa9-ce6beeccf8c2.igs" />
+    <None Include="Library\Template\Static\67e5a283-1f49-4f33-857f-c621df264d3b.igs" />
+    <None Include="Library\Template\Static\682711ab-5162-41e0-a0e9-ec4c5910ddd0.igs" />
+    <None Include="Library\Template\Static\6839debc-5dfb-4cf3-9fa2-3f861acf4830.igs" />
+    <None Include="Library\Template\Static\684dc1d9-5177-430c-b7a5-c21f0a47c091.igs" />
+    <None Include="Library\Template\Static\68ac3d24-e7cc-4d83-9fa4-d5775e46ab14.igs" />
+    <None Include="Library\Template\Static\68cfb578-bc43-4862-84d7-12847c6a1c4e.igs" />
+    <None Include="Library\Template\Static\690b96a9-1587-483c-9a26-36b65c742452.igs" />
+    <None Include="Library\Template\Static\691e43c9-ae26-4b2a-ad33-306374651d8a.igs" />
+    <None Include="Library\Template\Static\69484037-8eca-4122-9ab2-779cf777ab59.igs" />
+    <None Include="Library\Template\Static\695c9701-fdd1-4a99-beaa-01a4d20a5a4e.igs" />
+    <None Include="Library\Template\Static\69be2e92-620f-4aff-9772-beafbe793f40.igs" />
+    <None Include="Library\Template\Static\6b57d9ca-4e2b-4e87-8382-8f2a7c61590e.igs" />
+    <None Include="Library\Template\Static\6d40795e-9fd0-407c-9cbc-993211082792.igs" />
+    <None Include="Library\Template\Static\6d473384-ec2f-444d-9f7a-260105a7efb8.igs" />
+    <None Include="Library\Template\Static\6d748597-970d-4eab-8e52-eeac9104ead7.igs" />
+    <None Include="Library\Template\Static\6d9966de-e6fe-458b-83cf-e7b64d5e6e35.igs" />
+    <None Include="Library\Template\Static\6de16a04-8492-44a5-88c6-e70269d90c13.igs" />
+    <None Include="Library\Template\Static\6e31179a-c890-439c-8d4a-390e4b7718fd.igs" />
+    <None Include="Library\Template\Static\6e96124a-b686-41bd-ab7f-dc993e2bca12.igs" />
+    <None Include="Library\Template\Static\6f677e29-fdb1-4e90-a372-72e88bff51cf.igs" />
+    <None Include="Library\Template\Static\6f853839-480e-4aa6-8dfc-256ffff4661d.igs" />
+    <None Include="Library\Template\Static\6fa336e9-dfde-46ac-9949-bbb3ee78ddd3.igs" />
+    <None Include="Library\Template\Static\6ff2d702-19af-4bbe-a387-9b36c2f9ca74.igs" />
+    <None Include="Library\Template\Static\7017d3ec-9e3d-4633-9c1b-74d5572491fd.igs" />
+    <None Include="Library\Template\Static\704feb54-3a96-4e4c-a7f5-4f313b389406.igs" />
+    <None Include="Library\Template\Static\717b0368-e81c-49f2-9fcf-b77afdb5df81.igs" />
+    <None Include="Library\Template\Static\719fe441-946b-4ed0-b446-e721c29c1b85.igs" />
+    <None Include="Library\Template\Static\71c37c51-19ea-4713-b481-0c347bb4cbac.igs" />
+    <None Include="Library\Template\Static\71e3c461-dcb9-48b0-b5e6-c00c394a9bd7.igs" />
+    <None Include="Library\Template\Static\720b28e0-c181-4361-9f63-3b6747484a4a.igs" />
+    <None Include="Library\Template\Static\725fde40-adef-48e0-8e09-5dc6cac8b1fa.igs" />
+    <None Include="Library\Template\Static\727e9de7-6a84-42c5-9207-286180a88f77.igs" />
+    <None Include="Library\Template\Static\728925e0-eeeb-44a0-af56-eec359eb925c.igs" />
+    <None Include="Library\Template\Static\7290c469-c2b4-4f2f-928b-0030b62bbc86.igs" />
+    <None Include="Library\Template\Static\72a4acf3-469a-4760-99dd-962b0c7319d7.igs" />
+    <None Include="Library\Template\Static\72bd29cd-f665-474f-b8b4-9c4101168565.igs" />
+    <None Include="Library\Template\Static\72d57b2b-c5da-444f-9e2d-3c76624d9e8d.igs" />
+    <None Include="Library\Template\Static\738b70d6-c36f-42cf-8ecf-9ef959a05aaf.igs" />
+    <None Include="Library\Template\Static\74109cd9-cc34-440d-b71e-abfd9c0ff16d.igs" />
+    <None Include="Library\Template\Static\741d4ee8-748b-49b7-b73d-89f596bfd564.igs" />
+    <None Include="Library\Template\Static\742bc73f-093d-49d2-be19-7bd8ab448d6c.igs" />
+    <None Include="Library\Template\Static\74728862-87d5-4f09-bed7-834e196d4536.igs" />
+    <None Include="Library\Template\Static\74981342-d1c8-44dc-8a2c-e1e6cc7b15a3.igs" />
+    <None Include="Library\Template\Static\75191104-33e0-4051-b887-0bce3ca1230d.igs" />
+    <None Include="Library\Template\Static\752efaae-2719-48b2-90e1-2d41781e894c.igs" />
+    <None Include="Library\Template\Static\75d0f945-caf7-42f2-adbb-475c4a4fcf16.igs" />
+    <None Include="Library\Template\Static\75d67b7c-6d12-447c-9d60-d9be56f6bb52.igs" />
+    <None Include="Library\Template\Static\760d6b5b-0362-4848-b1c0-c46994ddc458.igs" />
+    <None Include="Library\Template\Static\76972dd8-b94c-4eab-9f91-1211fbd8cde6.igs" />
+    <None Include="Library\Template\Static\76c15723-8472-419e-ad4a-2b2d380fa531.igs" />
+    <None Include="Library\Template\Static\77021fdd-28e8-4ae9-874d-0a9a831820fc.igs" />
+    <None Include="Library\Template\Static\771c6dca-2824-407e-9d7e-6d96eebddd3d.igs" />
+    <None Include="Library\Template\Static\7796ea3a-962b-4d0f-bf74-9686465f0885.igs" />
+    <None Include="Library\Template\Static\77b16ae7-d899-450c-805e-418eafc10af9.igs" />
+    <None Include="Library\Template\Static\78348696-0736-4a13-b8d2-a5e941c50adf.igs" />
+    <None Include="Library\Template\Static\7839d542-7bd3-4931-89bd-3d6ac9733442.igs" />
+    <None Include="Library\Template\Static\78581852-d8b8-499a-8381-6221c91310c4.igs" />
+    <None Include="Library\Template\Static\78865497-f8b5-4aad-a927-e2c7333b147e.igs" />
+    <None Include="Library\Template\Static\78b6aab8-a98b-4731-a43b-eef05e3ffae5.igs" />
+    <None Include="Library\Template\Static\78df02a3-7c43-4f42-a471-248804b07623.igs" />
+    <None Include="Library\Template\Static\79333a5c-6c4f-4b0d-9089-446a4dce404e.igs" />
+    <None Include="Library\Template\Static\7965bc3c-5287-4492-87ca-c988ed17347e.igs" />
+    <None Include="Library\Template\Static\79808796-4da0-456f-9969-4960794e0870.igs" />
+    <None Include="Library\Template\Static\7a0a1c76-9465-49d8-b3c9-3c65608582e3.igs" />
+    <None Include="Library\Template\Static\7a48e4f9-2476-4b25-be05-e5d9b03b2a71.igs" />
+    <None Include="Library\Template\Static\7a675edb-c537-44c0-9a95-391042c77c71.igs" />
+    <None Include="Library\Template\Static\7a7e4a94-95a4-4fca-be29-820223d7c824.igs" />
+    <None Include="Library\Template\Static\7a85810c-0e47-4e36-aacc-4da93a30b578.igs" />
+    <None Include="Library\Template\Static\7ac4d3df-3454-47f8-8f33-009665adb45d.igs" />
+    <None Include="Library\Template\Static\7b2c96ff-c252-4651-bb8f-2c6511d4af81.igs" />
+    <None Include="Library\Template\Static\7bc967c0-d54e-4eeb-a4b3-6285f3c57718.igs" />
+    <None Include="Library\Template\Static\7c606669-f12e-41f4-926e-d323b87241fa.igs" />
+    <None Include="Library\Template\Static\7cc46c3e-00d6-4f21-89b7-307e0892f824.igs" />
+    <None Include="Library\Template\Static\7d3a2563-8f2e-4532-b89b-756e04a552df.igs" />
+    <None Include="Library\Template\Static\7d669919-ced8-48b6-b2a7-0fbd5fa4f368.igs" />
+    <None Include="Library\Template\Static\7d95b969-c75a-413b-ae83-63ad02b40c8d.igs" />
+    <None Include="Library\Template\Static\7e25f037-c96d-4160-8730-1140a2eddfeb.igs" />
+    <None Include="Library\Template\Static\7e3571eb-e569-4467-8d73-c36d8ef9beb9.igs" />
+    <None Include="Library\Template\Static\7e5de22c-8945-43fb-b946-ea34b1886573.igs" />
+    <None Include="Library\Template\Static\7f78a082-9c18-4c95-b6b0-48a7dbacd935.igs" />
+    <None Include="Library\Template\Static\7faad123-94e8-4ba6-8c3a-ab07b1b3ee07.igs" />
+    <None Include="Library\Template\Static\7fe2169b-85aa-4602-a046-f010d9303e79.igs" />
+    <None Include="Library\Template\Static\805648b5-38a9-4073-bd5f-e7b63274d2cb.igs" />
+    <None Include="Library\Template\Static\80c7669c-4d4f-45b3-bc8b-90ee7ec29141.igs" />
+    <None Include="Library\Template\Static\8108cf19-baa5-4cf1-85ee-92885f934e73.igs" />
+    <None Include="Library\Template\Static\810bd205-075b-4506-85c6-a6942726c8d8.igs" />
+    <None Include="Library\Template\Static\81bd75ec-73eb-48b4-a8a7-de105c10cb47.igs" />
+    <None Include="Library\Template\Static\81d87cd8-5eca-4590-8f65-bc6664f7cbaf.igs" />
+    <None Include="Library\Template\Static\81da2333-1f5d-45dc-8f37-35e276160e40.igs" />
+    <None Include="Library\Template\Static\829aee11-f636-423d-b3bf-da60993ed35c.igs" />
+    <None Include="Library\Template\Static\82a146d9-2df1-415e-b69e-0ea974d646be.igs" />
+    <None Include="Library\Template\Static\83cc861c-3f36-4342-ad6b-f2150222b83f.igs" />
+    <None Include="Library\Template\Static\83e56790-0a31-4fb8-b098-4672906a0cdd.igs" />
+    <None Include="Library\Template\Static\84f6a491-2d50-4944-9892-aa7cedbec4e3.igs" />
+    <None Include="Library\Template\Static\854d2072-ce04-41b8-8f47-b446d8ea4b90.igs" />
+    <None Include="Library\Template\Static\857ddde6-de03-4359-a69f-14823fefb5bf.igs" />
+    <None Include="Library\Template\Static\858405ae-1777-49bd-8502-989d8efc8801.igs" />
+    <None Include="Library\Template\Static\85b96bd6-2f4f-43e5-8767-66ad55d4f023.igs" />
+    <None Include="Library\Template\Static\876b27b5-827c-4d6e-8704-c893f873d0ca.igs" />
+    <None Include="Library\Template\Static\87ddfaeb-876b-47a8-9692-bd93c7d0328b.igs" />
+    <None Include="Library\Template\Static\881a9a24-a1af-44c5-981d-5eefbe2ac25d.igs" />
+    <None Include="Library\Template\Static\88aa553a-5c34-4774-9f64-805dd094e4f9.igs" />
+    <None Include="Library\Template\Static\8934f0c6-4daf-45e6-9049-220562403386.igs" />
+    <None Include="Library\Template\Static\893cfbc2-e8b0-42e1-890c-cbff4340368b.igs" />
+    <None Include="Library\Template\Static\89dfdb97-bee0-42c1-8b06-39dbd47b1cb6.igs" />
+    <None Include="Library\Template\Static\8ac11c90-17e8-470e-826d-eaca7433bc30.igs" />
+    <None Include="Library\Template\Static\8ad7a14b-c855-4e65-b459-0a4b80c618d2.igs" />
+    <None Include="Library\Template\Static\8b6dd5de-2b43-4185-9612-812cbe9e174b.igs" />
+    <None Include="Library\Template\Static\8b7205a3-c6ad-486e-8a8a-4470f78db811.igs" />
+    <None Include="Library\Template\Static\8b83ac14-3066-4b0a-aa19-c800024e0992.igs" />
+    <None Include="Library\Template\Static\8bfef141-7c9d-411d-94b2-2347f404ae67.igs" />
+    <None Include="Library\Template\Static\8ca75e27-0406-4965-bc62-650431faae03.igs" />
+    <None Include="Library\Template\Static\8cc7662d-8fc2-40ef-b0e0-3df56fc8a3ef.igs" />
+    <None Include="Library\Template\Static\8d41ac55-d374-42c3-9f92-4530ce552366.igs" />
+    <None Include="Library\Template\Static\8dbd0438-0964-4c38-a2ec-e4c9b613018a.igs" />
+    <None Include="Library\Template\Static\8dc2df64-d215-4bc9-944a-224d808e4a5f.igs" />
+    <None Include="Library\Template\Static\8dfcd7ae-e714-45e1-adb6-999a016939de.igs" />
+    <None Include="Library\Template\Static\8e10c57a-6496-4c81-b423-e3a976a67ace.igs" />
+    <None Include="Library\Template\Static\8e35f5b2-70aa-49d8-ab31-dce577947c43.igs" />
+    <None Include="Library\Template\Static\8e39c1eb-6028-47d9-9f20-b52797d81f6a.igs" />
+    <None Include="Library\Template\Static\8e52b68b-21f2-40fe-9c83-bde3fc4ed62e.igs" />
+    <None Include="Library\Template\Static\8ea1d25f-03a2-4f76-9f95-04ee103aaf60.igs" />
+    <None Include="Library\Template\Static\8eb7b95a-0612-45e3-85ee-fee8e46c42eb.igs" />
+    <None Include="Library\Template\Static\8ef587b8-aa2f-4e96-8ec6-92231c58699b.igs" />
+    <None Include="Library\Template\Static\8f35b9f8-45a9-40b6-b7bc-540bd96bc15d.igs" />
+    <None Include="Library\Template\Static\8f597276-298f-4cf3-9fe1-31b149f99694.igs" />
+    <None Include="Library\Template\Static\901b636f-8142-452e-bffd-9364b768f7be.igs" />
+    <None Include="Library\Template\Static\90adf349-8d39-4031-9d2c-a4ba0bb79817.igs" />
+    <None Include="Library\Template\Static\917702a5-e908-4df3-8020-5d8243e6e393.igs" />
+    <None Include="Library\Template\Static\91f65ffa-749c-4b2a-9c72-459828dbb807.igs" />
+    <None Include="Library\Template\Static\92158085-7074-41d9-8056-4611d8b9c235.igs" />
+    <None Include="Library\Template\Static\9247f3c8-27c8-42c6-947e-724acd082daf.igs" />
+    <None Include="Library\Template\Static\9293d29c-d450-4539-a688-8586e7f76eb1.igs" />
+    <None Include="Library\Template\Static\92a7479d-1784-4929-85eb-116c3858cc01.igs" />
+    <None Include="Library\Template\Static\9308b423-f9cd-40fa-98dc-814984cd2847.igs" />
+    <None Include="Library\Template\Static\935d2964-b7d3-4188-80e7-b0d01ca272a5.igs" />
+    <None Include="Library\Template\Static\938e0cc7-569b-47f4-9d57-4e6d8af23256.igs" />
+    <None Include="Library\Template\Static\93af3371-1cd1-4f80-84f5-49bc11006d7e.igs" />
+    <None Include="Library\Template\Static\93de972b-8306-46a0-a8e0-d77a347bf2d8.igs" />
+    <None Include="Library\Template\Static\945712f0-62eb-4c97-9017-605efde44e58.igs" />
+    <None Include="Library\Template\Static\94a5923e-1dd8-4197-b97d-7d538edf4b26.igs" />
+    <None Include="Library\Template\Static\94ae9120-98df-486e-acc9-f09bfa07bccb.igs" />
+    <None Include="Library\Template\Static\95856818-9ac5-4ed0-9821-6ce803d5f7a6.igs" />
+    <None Include="Library\Template\Static\95c38b36-7a22-48c6-a2d0-248019c555bf.igs" />
+    <None Include="Library\Template\Static\967d88bd-9090-4cdc-8f9a-eb271b09ea77.igs" />
+    <None Include="Library\Template\Static\96b92be8-3378-495e-a3a8-3bda9ca9c599.igs" />
+    <None Include="Library\Template\Static\97deb598-2bbe-4b51-96b0-6aa41e476b99.igs" />
+    <None Include="Library\Template\Static\97f1bdcf-66e6-41d8-a6d6-d0cd8d2ea013.igs" />
+    <None Include="Library\Template\Static\985f62db-f386-4266-8aa1-a815b8921ba2.igs" />
+    <None Include="Library\Template\Static\98a27cdb-35be-4950-9d29-20f59ec8e2b0.igs" />
+    <None Include="Library\Template\Static\98d943ee-0c4f-45c8-ae3c-97cb084ed81a.igs" />
+    <None Include="Library\Template\Static\99088fc0-b130-4c2c-9013-496de0d22b24.igs" />
+    <None Include="Library\Template\Static\99216427-04cc-4f13-a37d-3cec5b319884.igs" />
+    <None Include="Library\Template\Static\99227a02-8cfb-46f6-b900-6cb91cfaec84.igs" />
+    <None Include="Library\Template\Static\99b967a7-695c-4012-936f-c11cb3b89e6e.igs" />
+    <None Include="Library\Template\Static\99f391d0-f26b-4d08-a741-deea9c55ee57.igs" />
+    <None Include="Library\Template\Static\9a469c5b-42ed-4362-b7c6-562efdd788da.igs" />
+    <None Include="Library\Template\Static\9a4eac65-a2bf-42b1-8b06-2283b6591757.igs" />
+    <None Include="Library\Template\Static\9a72e1fb-b846-4547-a890-c7e0579748fc.igs" />
+    <None Include="Library\Template\Static\9aa0bd87-c8c2-41fb-a754-1510649b6d66.igs" />
+    <None Include="Library\Template\Static\9ac6cc5e-af2c-4189-b45c-20f5075a1cff.igs" />
+    <None Include="Library\Template\Static\9ad7fab8-e500-4854-8aee-ea84c1cc53da.igs" />
+    <None Include="Library\Template\Static\9b66bd07-3565-4ace-b6e0-7e66067fb6da.igs" />
+    <None Include="Library\Template\Static\9b9f403d-aba1-4e87-aa5d-2258a260cb14.igs" />
+    <None Include="Library\Template\Static\9bdd9b45-6bab-4c99-9162-62cd221a80eb.igs" />
+    <None Include="Library\Template\Static\9be3c3a8-98e2-4a17-9693-2d5d4904b3cc.igs" />
+    <None Include="Library\Template\Static\9c14d6e3-e39f-4040-bf66-007045d61b0a.igs" />
+    <None Include="Library\Template\Static\9c3e06bb-0dd6-4c29-9eb4-125a62d0f590.igs" />
+    <None Include="Library\Template\Static\9cc04dd9-d0a2-4cb4-886f-34f8049bcfdb.igs" />
+    <None Include="Library\Template\Static\9d4445c5-7c2a-4346-be10-d4d6f1afae15.igs" />
+    <None Include="Library\Template\Static\9d4ca691-a0f5-4d59-9f8b-4d9b00539741.igs" />
+    <None Include="Library\Template\Static\9d8eebf1-a535-4328-bc1f-d1ec454d8532.igs" />
+    <None Include="Library\Template\Static\9d94e7e5-3ed4-48a2-85b6-cd186f00cf8c.igs" />
+    <None Include="Library\Template\Static\9d9ac057-6320-46e0-a34d-78d9ff2e4e7b.igs" />
+    <None Include="Library\Template\Static\9dc815cf-79e0-4615-97b9-4a00c90251dd.igs" />
+    <None Include="Library\Template\Static\9e3a6831-a10e-4e1e-8599-55cfd7b6a6b8.igs" />
+    <None Include="Library\Template\Static\9e9b47b7-78c5-42e1-8a49-3d08cf46194f.igs" />
+    <None Include="Library\Template\Static\9ecaaa71-b96a-43c6-8b1f-dc0aa7c73fdc.igs" />
+    <None Include="Library\Template\Static\9f34d55f-f67e-4983-893e-a1ed1f9e7397.igs" />
+    <None Include="Library\Template\Static\9f49fabe-4ac3-42e0-83fd-d6c5d8ed56e4.igs" />
+    <None Include="Library\Template\Static\9f87ab40-05eb-40f7-a29e-c651d40b44d9.igs" />
+    <None Include="Library\Template\Static\9f9b5a7a-d1e8-4f6f-9fc4-69745e189918.igs" />
+    <None Include="Library\Template\Static\9fdd1d18-644d-4261-8b85-6ffaec4e9bde.igs" />
+    <None Include="Library\Template\Static\a1055114-0559-41c1-89d2-2213cbe8e886.igs" />
+    <None Include="Library\Template\Static\a10a37b8-4d98-456a-ad2a-87596ab3581d.igs" />
+    <None Include="Library\Template\Static\a128206c-581e-4f58-a178-06d16095c3b3.igs" />
+    <None Include="Library\Template\Static\a13f390d-1b33-4453-8873-431f13ff03f0.igs" />
+    <None Include="Library\Template\Static\a19971a2-4464-4431-8a38-26cc1d9a3e4d.igs" />
+    <None Include="Library\Template\Static\a23edc2f-38ea-4d5f-b92c-9d15a515669c.igs" />
+    <None Include="Library\Template\Static\a24f5ce6-8a56-45d1-b800-40cb69f1004e.igs" />
+    <None Include="Library\Template\Static\a268cc98-8c2a-44fe-9a9f-d6036545c0bc.igs" />
+    <None Include="Library\Template\Static\a2fbc803-2e9d-429e-8abe-734f39e02f52.igs" />
+    <None Include="Library\Template\Static\a31c6029-cb27-499d-9fa6-20ac776f8fa8.igs" />
+    <None Include="Library\Template\Static\a3543310-1829-470d-97b0-2dcb12868d55.igs" />
+    <None Include="Library\Template\Static\a3cd231f-b296-4d9f-a650-45916c0ffa2a.igs" />
+    <None Include="Library\Template\Static\a462c6db-3e55-4b11-99a4-e3027b8ed15d.igs" />
+    <None Include="Library\Template\Static\a5013add-ef40-4851-8155-5e2556f34ba0.igs" />
+    <None Include="Library\Template\Static\a53b6a2d-81e3-4cf7-8b50-f99ccc3a0922.igs" />
+    <None Include="Library\Template\Static\a5665d86-81e2-4a62-acc8-34932a5d6a01.igs" />
+    <None Include="Library\Template\Static\a5b8691d-b36b-4e16-a96d-430d58caa4cb.igs" />
+    <None Include="Library\Template\Static\a5e24151-5755-43be-b59b-ea209adf54eb.igs" />
+    <None Include="Library\Template\Static\a631f20b-30e9-4247-8e95-c5514d27d1b5.igs" />
+    <None Include="Library\Template\Static\a63f8c01-16f7-429d-b7e9-f5cd749bebf1.igs" />
+    <None Include="Library\Template\Static\a65fca77-ddb3-472b-a17f-38261b45d4a6.igs" />
+    <None Include="Library\Template\Static\a708476e-367a-49d7-97f9-3b470c9bbdd4.igs" />
+    <None Include="Library\Template\Static\a7557a57-930c-4810-a2ea-a333cfceedbd.igs" />
+    <None Include="Library\Template\Static\a7dedf42-93cc-41f0-a231-5d8f7c21d150.igs" />
+    <None Include="Library\Template\Static\a80343ed-d305-4e26-b333-0e822ca4e988.igs" />
+    <None Include="Library\Template\Static\a85235bf-1f98-4b47-9f03-5b5fbd82d591.igs" />
+    <None Include="Library\Template\Static\a9114907-53a0-4101-9cb3-6321e8f8331a.igs" />
+    <None Include="Library\Template\Static\a97926d2-eff6-4137-a6af-ac2a2d4f7967.igs" />
+    <None Include="Library\Template\Static\a99e2a9d-0548-4df9-a06e-380139ff8fbe.igs" />
+    <None Include="Library\Template\Static\a99e84bd-2d42-48a8-ae16-d4f98a2ef3bc.igs" />
+    <None Include="Library\Template\Static\a9c237c9-06d9-47e6-bdd5-3b6b9a95dbfa.igs" />
+    <None Include="Library\Template\Static\a9c33c7b-c767-43c9-a15f-7928e1ae83b3.igs" />
+    <None Include="Library\Template\Static\a9d0f05c-8214-491b-8338-37acc72ea027.igs" />
+    <None Include="Library\Template\Static\a9fb633d-d6d6-4c77-adc8-e69264121bcd.igs" />
+    <None Include="Library\Template\Static\aa482c3f-ad42-48af-b038-6d818825f8b2.igs" />
+    <None Include="Library\Template\Static\ab14cf79-505e-4df1-8cf2-9a13ff925e29.igs" />
+    <None Include="Library\Template\Static\ab4712f6-e112-42c1-bbbd-06055403414d.igs" />
+    <None Include="Library\Template\Static\ac1f62bd-1d8f-41f5-a063-aff62150459f.igs" />
+    <None Include="Library\Template\Static\ac774b3d-74a4-4af5-819d-04c66d52c841.igs" />
+    <None Include="Library\Template\Static\aced886e-4c4d-4d74-ab65-ff68053c5987.igs" />
+    <None Include="Library\Template\Static\ad05df47-803c-427e-a4e9-1d374cfcb2ba.igs" />
+    <None Include="Library\Template\Static\adb56c0c-d52c-4c67-9e5b-9c97a64d2af9.igs" />
+    <None Include="Library\Template\Static\ae39b9eb-9777-4627-90a4-15156d6207d9.igs" />
+    <None Include="Library\Template\Static\ae648735-268e-4c4a-8537-64d3f2e69138.igs" />
+    <None Include="Library\Template\Static\ae9b9202-af31-4dba-b420-957b0501ccf5.igs" />
+    <None Include="Library\Template\Static\aecee4f1-ba89-44fd-ae93-26b4d9d4e66e.igs" />
+    <None Include="Library\Template\Static\aeef0e8b-8a10-4020-80db-09af62b4193f.igs" />
+    <None Include="Library\Template\Static\af0d8e9f-27ff-4f64-bc17-7e774cb818ef.igs" />
+    <None Include="Library\Template\Static\af20c50f-63d0-49c1-96ae-f1c621535b79.igs" />
+    <None Include="Library\Template\Static\b04938c6-cb94-4d8c-8ae3-ccf8c6119db9.igs" />
+    <None Include="Library\Template\Static\b0715788-3cdc-4a2a-8a9b-65f0ac611348.igs" />
+    <None Include="Library\Template\Static\b0a6c624-d55e-438c-87db-82894ef66898.igs" />
+    <None Include="Library\Template\Static\b0e1ef90-0b7c-46bb-ace2-315602e8a2a8.igs" />
+    <None Include="Library\Template\Static\b0fd2fe5-8c58-4d57-96c7-51ce9f7da184.igs" />
+    <None Include="Library\Template\Static\b1293e5a-2203-40a4-8700-d4b78556668e.igs" />
+    <None Include="Library\Template\Static\b241a189-7722-4f23-8cb7-9a68a70dd352.igs" />
+    <None Include="Library\Template\Static\b25efa3f-71a6-447e-b9a0-9cf0200e9af4.igs" />
+    <None Include="Library\Template\Static\b287319a-435a-4250-a19a-a353c629edd7.igs" />
+    <None Include="Library\Template\Static\b306dc20-c389-4754-a6a1-57a55490cb7f.igs" />
+    <None Include="Library\Template\Static\b3f8da0c-dae1-4dfb-9e36-fb372df8033b.igs" />
+    <None Include="Library\Template\Static\b40c6248-f334-4abc-9e0b-e3d09f4b296d.igs" />
+    <None Include="Library\Template\Static\b5635c2f-cd53-45fc-82d4-85641e4595fd.igs" />
+    <None Include="Library\Template\Static\b56aeb1f-ff04-4f69-92a1-d4db9ff7fe0c.igs" />
+    <None Include="Library\Template\Static\b58d5bec-3170-45a2-9206-9abb20308856.igs" />
+    <None Include="Library\Template\Static\b5ba3670-6a7e-4314-bed9-e41e5acd8145.igs" />
+    <None Include="Library\Template\Static\b618b6b8-fb29-4143-be6b-946bb1ee4a70.igs" />
+    <None Include="Library\Template\Static\b67cf3db-7aa5-4a73-ba73-2ecab1c678f1.igs" />
+    <None Include="Library\Template\Static\b6f7796d-9e3d-412c-a16d-5ddcb84445cf.igs" />
+    <None Include="Library\Template\Static\b7152a76-66ae-4fa0-8e4a-fa00e43038d8.igs" />
+    <None Include="Library\Template\Static\b719b199-61e5-459b-87f4-b4779f707ea7.igs" />
+    <None Include="Library\Template\Static\b79c50a1-57a8-4ab9-aa81-980c39523ea1.igs" />
+    <None Include="Library\Template\Static\b79d742b-58c1-4ca3-86f3-840c63640a61.igs" />
+    <None Include="Library\Template\Static\b81fbc54-7961-4f98-a137-091815718048.igs" />
+    <None Include="Library\Template\Static\b84b5728-3920-44b4-9fac-4564a26db58d.igs" />
+    <None Include="Library\Template\Static\b85d36ce-cd0e-4667-bf33-50c552c6499a.igs" />
+    <None Include="Library\Template\Static\b87caa47-e76f-440f-9bf3-5d342d8f6213.igs" />
+    <None Include="Library\Template\Static\b8a61f7b-4482-4994-815f-40970ad696d0.igs" />
+    <None Include="Library\Template\Static\b8f35459-8aff-4e8b-aeef-a3599bb62c6a.igs" />
+    <None Include="Library\Template\Static\b8fdf163-81a0-46e6-b6d4-b2f9b5197e3f.igs" />
+    <None Include="Library\Template\Static\ba760a5a-dc0a-436f-ba98-a12f8dfe2a7d.igs" />
+    <None Include="Library\Template\Static\bada98d1-cbeb-40dd-91f6-1c861b9e4e5a.igs" />
+    <None Include="Library\Template\Static\bb53228f-8b6d-4eb7-87e9-fdfa2c4c1df1.igs" />
+    <None Include="Library\Template\Static\bb6d1a47-cc42-4a42-8d1b-b59661a6f977.igs" />
+    <None Include="Library\Template\Static\bbd34b3c-726d-4ec7-aad9-555f5192231e.igs" />
+    <None Include="Library\Template\Static\bd2f02f1-e43e-451e-a519-186dbbfab65e.igs" />
+    <None Include="Library\Template\Static\bdcb5926-b098-42c1-98cc-961dde6bba7e.igs" />
+    <None Include="Library\Template\Static\bddc6da3-08ca-42ba-9bdb-a3fb2b4ebe4a.igs" />
+    <None Include="Library\Template\Static\be188dc9-f638-4803-9dc1-e14d57df46fa.igs" />
+    <None Include="Library\Template\Static\be66c840-552a-4f47-8a4b-14d2eca347f0.igs" />
+    <None Include="Library\Template\Static\bee87f78-21cf-4195-b0a7-3dd14d2e4944.igs" />
+    <None Include="Library\Template\Static\bf2a3094-4204-4240-85d9-0a479e2da755.igs" />
+    <None Include="Library\Template\Static\bf4c4d01-8b45-4d74-8a50-3cd6a93e1249.igs" />
+    <None Include="Library\Template\Static\bf8d885c-d8e0-4e26-b6e2-9b92618539b7.igs" />
+    <None Include="Library\Template\Static\bfa69565-a120-4851-a9a6-16151ca692b4.igs" />
+    <None Include="Library\Template\Static\bffe9410-e7c2-4233-9556-922d6e42c7cb.igs" />
+    <None Include="Library\Template\Static\c011fcdd-d298-47b6-84ff-c32c9cce1836.igs" />
+    <None Include="Library\Template\Static\c026c666-b05f-41e8-a9e6-18d142f6f3dd.igs" />
+    <None Include="Library\Template\Static\c03313f4-b762-4758-95b1-bd76955df746.igs" />
+    <None Include="Library\Template\Static\c08737e9-d220-4487-a31a-d9d082835789.igs" />
+    <None Include="Library\Template\Static\c09a83d9-aa42-4680-8877-42fbfb10a6ac.igs" />
+    <None Include="Library\Template\Static\c18ed149-b8a6-4e41-aa0c-773fca9f9503.igs" />
+    <None Include="Library\Template\Static\c1c40191-b870-4c6e-90e0-07b89e0b3d09.igs" />
+    <None Include="Library\Template\Static\c1cace43-581a-4b7e-a534-b877887af11a.igs" />
+    <None Include="Library\Template\Static\c1d94609-39d5-44ab-b76c-4940ca0df61f.igs" />
+    <None Include="Library\Template\Static\c3209181-513a-4fba-aab4-370e8334d95e.igs" />
+    <None Include="Library\Template\Static\c3219d4d-fc9d-4b0e-8f26-00129442b07c.igs" />
+    <None Include="Library\Template\Static\c41e75a6-b326-492d-ae26-54cf41a1bb05.igs" />
+    <None Include="Library\Template\Static\c44b7ed2-5867-4da8-ad90-aa50aec93e45.igs" />
+    <None Include="Library\Template\Static\c4525f40-b83f-48ee-aa14-6e0bdbf0caeb.igs" />
+    <None Include="Library\Template\Static\c4641af8-7ffb-483e-8b8d-d92a3933b4da.igs" />
+    <None Include="Library\Template\Static\c4fd4f9e-d866-44a1-8120-4986c160ca62.igs" />
+    <None Include="Library\Template\Static\c5697880-c6c6-49dc-b523-dd4d9b158087.igs" />
+    <None Include="Library\Template\Static\c5cddfc1-ff3c-4a50-a650-4c4df7cf8513.igs" />
+    <None Include="Library\Template\Static\c5eb59b2-9a0a-41ad-bd88-39373c354c51.igs" />
+    <None Include="Library\Template\Static\c60df95a-10cc-455c-a9ad-cbd33fdbeb6d.igs" />
+    <None Include="Library\Template\Static\c61c19e4-aaf7-45dc-a170-1f5a184ef8c3.igs" />
+    <None Include="Library\Template\Static\c61cf4a7-493f-4f33-be80-218820ccf543.igs" />
+    <None Include="Library\Template\Static\c674802b-df1d-4e18-b6b1-96c3c97d2f44.igs" />
+    <None Include="Library\Template\Static\c6c9cc85-0b1c-4306-b6cf-61c3061c3b00.igs" />
+    <None Include="Library\Template\Static\c701201f-e851-461d-8015-958616a0af69.igs" />
+    <None Include="Library\Template\Static\c7484584-f289-4e67-9607-9b9c3f63bcae.igs" />
+    <None Include="Library\Template\Static\c75405c7-02bd-400b-92da-df5a5e6c8138.igs" />
+    <None Include="Library\Template\Static\c760442e-3e1c-4122-98e9-876fcdb86a10.igs" />
+    <None Include="Library\Template\Static\c763a101-8825-4377-aa3b-030bb9fae11b.igs" />
+    <None Include="Library\Template\Static\c77d727d-5cbc-4403-8af8-354dc6b7c307.igs" />
+    <None Include="Library\Template\Static\c7848b6d-3782-4b00-a7c2-26018c1352a0.igs" />
+    <None Include="Library\Template\Static\c796f446-86ba-4608-ad5e-1e1f8f2268d2.igs" />
+    <None Include="Library\Template\Static\c8d09e08-9ac6-4453-ba95-c555aea06929.igs" />
+    <None Include="Library\Template\Static\c8eac421-3236-4bda-9575-1c4a7e1d228e.igs" />
+    <None Include="Library\Template\Static\c95138c4-fdf4-40ad-a8e4-5bfd21b8a00e.igs" />
+    <None Include="Library\Template\Static\c97a3e2d-486b-4d33-8655-49bbc7e66e1e.igs" />
+    <None Include="Library\Template\Static\c9dcc776-352f-4508-8413-b76aafda2678.igs" />
+    <None Include="Library\Template\Static\ca228b3f-dcec-4160-8221-3596884b7a44.igs" />
+    <None Include="Library\Template\Static\ca4085cd-160b-46b0-b1d9-bb93c794c3f3.igs" />
+    <None Include="Library\Template\Static\cafcec08-1298-49ac-ba48-750eceadadae.igs" />
+    <None Include="Library\Template\Static\cb085011-13ee-4d32-9f9b-f29114afcb99.igs" />
+    <None Include="Library\Template\Static\cb258834-eb72-42f1-9273-ad4f89dc7054.igs" />
+    <None Include="Library\Template\Static\cb2ff900-e830-40e2-9a9b-c93c4657a1e2.igs" />
+    <None Include="Library\Template\Static\cb9d07f6-c68b-4c94-a773-c0ccc5e253ed.igs" />
+    <None Include="Library\Template\Static\cc6164b1-1a8a-4876-b52f-e018e75dcdd8.igs" />
+    <None Include="Library\Template\Static\cc92c29c-ac8a-4831-8032-aadcee983cbd.igs" />
+    <None Include="Library\Template\Static\ccc99362-db1d-4339-b58a-677a13dc9263.igs" />
+    <None Include="Library\Template\Static\cced4750-69f2-45c3-87d8-2bf0cdf1a41b.igs" />
+    <None Include="Library\Template\Static\ccfdc697-2fb9-42d8-abcc-5ded40c9b455.igs" />
+    <None Include="Library\Template\Static\cd0218a1-4acd-4514-938d-54bee583ccd0.igs" />
+    <None Include="Library\Template\Static\cd233cae-6298-4590-8539-6c1ddf469cc8.igs" />
+    <None Include="Library\Template\Static\cd3bd811-8c24-4dbc-889f-9b6863f7b494.igs" />
+    <None Include="Library\Template\Static\cdd7ee01-711c-4e3e-8bc5-fc0a05c63b75.igs" />
+    <None Include="Library\Template\Static\ce43a06d-37f6-4639-8008-cf063378ad25.igs" />
+    <None Include="Library\Template\Static\ce5444f7-4b0b-42a2-8e68-07d87ddb3d30.igs" />
+    <None Include="Library\Template\Static\ce7e2374-e977-44b1-8944-9f404e3e4b9e.igs" />
+    <None Include="Library\Template\Static\ce7f42a7-4b51-404b-bac4-34ffc5e97d61.igs" />
+    <None Include="Library\Template\Static\cebbb953-5877-45d7-8f25-b49d34ad4a1f.igs" />
+    <None Include="Library\Template\Static\cec74262-4cdf-49de-a2a6-6d94b97dc7c9.igs" />
+    <None Include="Library\Template\Static\cf3f3d34-0aca-422d-8458-8ff4103eea1d.igs" />
+    <None Include="Library\Template\Static\cf57e241-73cf-4b58-a396-0559eb032051.igs" />
+    <None Include="Library\Template\Static\cfa27b07-69f2-4cba-a805-f75a28909e4c.igs" />
+    <None Include="Library\Template\Static\cfdcf3cb-9542-44da-9114-c9f80ceb807a.igs" />
+    <None Include="Library\Template\Static\cff91cbe-73a0-41de-b796-89f2c5e1a88b.igs" />
+    <None Include="Library\Template\Static\d013a906-4b1c-4831-8005-582c95927dac.igs" />
+    <None Include="Library\Template\Static\d06b685c-11dd-47c1-979a-dd18ba707cfe.igs" />
+    <None Include="Library\Template\Static\d06d88ee-a707-4a86-83b2-1a0f48c8b63f.igs" />
+    <None Include="Library\Template\Static\d09b344e-ec32-4e73-8302-346bcee8b609.igs" />
+    <None Include="Library\Template\Static\d0a63745-f63d-45d2-9596-73a1bbe255dd.igs" />
+    <None Include="Library\Template\Static\d138848d-7ab0-4dff-b0fc-39c4f9ebe151.igs" />
+    <None Include="Library\Template\Static\d1769362-b0f0-411d-8c20-34a4f929f2a3.igs" />
+    <None Include="Library\Template\Static\d3490f50-364d-43d7-bab6-48fd184a112c.igs" />
+    <None Include="Library\Template\Static\d3ef5505-3050-4d11-846b-abefce3be206.igs" />
+    <None Include="Library\Template\Static\d45b8fcf-fce3-426e-8565-18b6ec3a9a53.igs" />
+    <None Include="Library\Template\Static\d5299867-800c-4e35-97aa-5f828d262b09.igs" />
+    <None Include="Library\Template\Static\d5675be9-a2fd-40f6-b914-901342dffa75.igs" />
+    <None Include="Library\Template\Static\d56ff650-e4ce-49a0-a49d-780433afadec.igs" />
+    <None Include="Library\Template\Static\d620251f-af77-4863-89d1-0112f98cb13d.igs" />
+    <None Include="Library\Template\Static\d649682c-4e96-4708-80c6-952f8bcdc97c.igs" />
+    <None Include="Library\Template\Static\d64ee9c2-c1d3-4f93-8ef6-35c79151159d.igs" />
+    <None Include="Library\Template\Static\d69bc19f-2310-4315-8b07-b9866a955f9d.igs" />
+    <None Include="Library\Template\Static\d6aae591-017c-4e8c-b43a-b7c6d4d6fcd2.igs" />
+    <None Include="Library\Template\Static\d6b6db99-2923-4b22-81d2-dc635c4b82de.igs" />
+    <None Include="Library\Template\Static\d723fadf-088f-4787-a8aa-711f62b27d3b.igs" />
+    <None Include="Library\Template\Static\d7411733-4bf6-4bcb-b008-d1295f84290e.igs" />
+    <None Include="Library\Template\Static\d798c593-8a41-4b2c-b995-6d67523100fb.igs" />
+    <None Include="Library\Template\Static\d89ccffa-0191-4b29-bac1-dfc6942af1b7.igs" />
+    <None Include="Library\Template\Static\d8b787ce-b6da-4a00-a5df-21ed01ca24bb.igs" />
+    <None Include="Library\Template\Static\d8f7f23d-8034-48bd-b610-3b4af1cf8924.igs" />
+    <None Include="Library\Template\Static\d905880d-b98b-47e6-9271-8560338f1d11.igs" />
+    <None Include="Library\Template\Static\d98630b4-51e3-47f6-a6f3-f509a802c3c1.igs" />
+    <None Include="Library\Template\Static\da02aa15-cf72-402a-979a-2b6b9a7f9ee2.igs" />
+    <None Include="Library\Template\Static\da28eaa6-de08-4323-ad09-5ef0250cfe1e.igs" />
+    <None Include="Library\Template\Static\daba6c90-6048-48cc-a5bc-b16d200e414c.igs" />
+    <None Include="Library\Template\Static\dabb7538-a1d3-4db8-b991-6cdd4e788486.igs" />
+    <None Include="Library\Template\Static\db19aeb0-3c05-45e0-b473-d95a55d1bb59.igs" />
+    <None Include="Library\Template\Static\db4a51fb-19fc-411a-b724-d4de9fd35688.igs" />
+    <None Include="Library\Template\Static\db4b3097-5a2b-4fad-8bc0-b5d56f90b064.igs" />
+    <None Include="Library\Template\Static\dbbcab49-2f6b-4e80-bcaf-c02a68250c18.igs" />
+    <None Include="Library\Template\Static\dc0704c6-50e4-43a3-9000-69e1d5f5cccf.igs" />
+    <None Include="Library\Template\Static\dc421752-71ce-499b-a127-df8c4cde81f7.igs" />
+    <None Include="Library\Template\Static\dc7464cb-ca39-457e-bd41-1dc6b99bda5b.igs" />
+    <None Include="Library\Template\Static\dcc676f5-6d02-4cd5-a3c7-3206321f84e6.igs" />
+    <None Include="Library\Template\Static\dd543351-6b8c-4877-9532-e5d789202ba5.igs" />
+    <None Include="Library\Template\Static\dd7a1b22-d93c-4d7e-a44b-b57110ba7141.igs" />
+    <None Include="Library\Template\Static\ddaf034e-e71a-465e-9bc5-7de7b3cf29c5.igs" />
+    <None Include="Library\Template\Static\de4a6f75-21b0-4696-871f-39b10846328e.igs" />
+    <None Include="Library\Template\Static\de6b080b-32ae-4b91-9492-5c187941e96e.igs" />
+    <None Include="Library\Template\Static\de80dbb8-be9a-4a99-973d-17060b395d60.igs" />
+    <None Include="Library\Template\Static\dec6f37b-9286-4436-9a39-0d1289a66214.igs" />
+    <None Include="Library\Template\Static\df404376-f9af-419c-8bb4-2d9a87f1afeb.igs" />
+    <None Include="Library\Template\Static\e0104f81-5d2f-4331-a53d-a1723eb83133.igs" />
+    <None Include="Library\Template\Static\e0880b1d-fe8a-4654-9a9c-d5afe5421e74.igs" />
+    <None Include="Library\Template\Static\e1202d39-9ea9-424a-9caa-d4222e7c5d81.igs" />
+    <None Include="Library\Template\Static\e18ed97b-c5d9-4519-be1b-3c147109f554.igs" />
+    <None Include="Library\Template\Static\e19d80c0-2d35-4d33-a7ad-5743112d1361.igs" />
+    <None Include="Library\Template\Static\e2acbdb7-a3f7-4a2e-bcc6-04f4e639bd91.igs" />
+    <None Include="Library\Template\Static\e360d7de-ef4e-4eae-bf01-a1ce1f85edcb.igs" />
+    <None Include="Library\Template\Static\e3a287c5-36d5-418a-8929-94229fcbc874.igs" />
+    <None Include="Library\Template\Static\e46b8f3b-089f-4b23-9df4-38201315cf7f.igs" />
+    <None Include="Library\Template\Static\e4f1f257-5457-42d3-a4e0-43d35adb8552.igs" />
+    <None Include="Library\Template\Static\e51798f4-9cf7-418f-89a8-12888c7b100b.igs" />
+    <None Include="Library\Template\Static\e51d737e-3729-423b-85cb-c4ae609d0fee.igs" />
+    <None Include="Library\Template\Static\e649de0c-3430-4f20-bed6-c0980ef95bc6.igs" />
+    <None Include="Library\Template\Static\e697724b-3b46-42f7-abd9-462fbc1869e2.igs" />
+    <None Include="Library\Template\Static\e700ab68-8a3a-4b3e-932c-237942ecf137.igs" />
+    <None Include="Library\Template\Static\e71af7cc-b9e4-4058-9efb-18281e235d88.igs" />
+    <None Include="Library\Template\Static\e74b976c-dc5c-4f6b-b292-b481e8a2580a.igs" />
+    <None Include="Library\Template\Static\e787acdf-3f28-4ef0-bd6e-91dc679fe8a7.igs" />
+    <None Include="Library\Template\Static\e834147c-62d9-4357-a19c-2ad0dec7d857.igs" />
+    <None Include="Library\Template\Static\e85d7b92-55ce-4682-95b6-45e52aacf74b.igs" />
+    <None Include="Library\Template\Static\e862d9e6-ccf1-47c9-a99a-eb9827da24f2.igs" />
+    <None Include="Library\Template\Static\e87947a2-55ef-47d4-9d96-4dd5afda6de3.igs" />
+    <None Include="Library\Template\Static\e89e5a17-1425-49c5-9e7d-0b75f3bef464.igs" />
+    <None Include="Library\Template\Static\e90b10c0-cc14-4e0c-a495-33e706c7107b.igs" />
+    <None Include="Library\Template\Static\ea2505d8-0c4a-48fe-94ea-217dbf588d23.igs" />
+    <None Include="Library\Template\Static\ea2b45b4-cd44-42cc-b419-8005a9ac5abc.igs" />
+    <None Include="Library\Template\Static\ea56a239-2408-43f6-88e1-26b5d59134e5.igs" />
+    <None Include="Library\Template\Static\eabf66f4-e435-4ba2-bbef-c90655b584f3.igs" />
+    <None Include="Library\Template\Static\eadb30e3-7688-4451-8370-b7fc0eb5e071.igs" />
+    <None Include="Library\Template\Static\eb1bc069-d711-458e-ae64-0e65719e7153.igs" />
+    <None Include="Library\Template\Static\eb394fcc-899d-42bb-a091-10c04327ff41.igs" />
+    <None Include="Library\Template\Static\eb54d58f-c554-4b44-a940-5e8f92688571.igs" />
+    <None Include="Library\Template\Static\eb6f62c7-9b78-45ad-ae1c-dcee39e10405.igs" />
+    <None Include="Library\Template\Static\ebadc306-2949-46b7-a198-35a137cdb15d.igs" />
+    <None Include="Library\Template\Static\ebc46722-16f9-46fc-8386-4304d4fff4e1.igs" />
+    <None Include="Library\Template\Static\ec32606e-6350-4842-9a88-e75b8e4f41b8.igs" />
+    <None Include="Library\Template\Static\ec60a542-932c-4373-a4e6-03d14d916c14.igs" />
+    <None Include="Library\Template\Static\ec70e4c8-da3b-4775-b54e-5034dd5a520f.igs" />
+    <None Include="Library\Template\Static\ed664b31-3ae0-48bd-be9a-ac21c80c2568.igs" />
+    <None Include="Library\Template\Static\ed9d8d95-8fd5-40aa-af18-bd56245565ac.igs" />
+    <None Include="Library\Template\Static\ed9eaf03-2454-4196-aa95-f80e429319a3.igs" />
+    <None Include="Library\Template\Static\eea9c40e-e718-46d6-9e74-65d1330a5f74.igs" />
+    <None Include="Library\Template\Static\ef2ba2f6-a2a3-43de-865f-c6869968efcb.igs" />
+    <None Include="Library\Template\Static\ef8b08e0-f47b-4b80-85fe-33f54999a03f.igs" />
+    <None Include="Library\Template\Static\efe31d28-259c-4619-809a-f4caf1a7e3c9.igs" />
+    <None Include="Library\Template\Static\f01a9b43-478f-463d-80e0-08409ac80544.igs" />
+    <None Include="Library\Template\Static\f0ebb195-708c-4112-bd2e-a4fc090b3a07.igs" />
+    <None Include="Library\Template\Static\f100c050-3b54-4c8b-8456-255d3977fdb5.igs" />
+    <None Include="Library\Template\Static\f14ebb80-9193-46a8-aba2-4da1365452d4.igs" />
+    <None Include="Library\Template\Static\f15bf557-2ac6-4285-845d-5046c82c8fce.igs" />
+    <None Include="Library\Template\Static\f1954014-5f0e-4a49-bd60-23b231e283f4.igs" />
+    <None Include="Library\Template\Static\f1c463e1-dc80-4559-a66f-368193f624ed.igs" />
+    <None Include="Library\Template\Static\f27b8a90-34d5-448e-aa5d-3689fefa7790.igs" />
+    <None Include="Library\Template\Static\f2c7930b-3542-4c3f-82a3-c9d166968875.igs" />
+    <None Include="Library\Template\Static\f2db0dc6-4988-4647-8edc-41b345a2564b.igs" />
+    <None Include="Library\Template\Static\f32a496c-5fd5-4f3f-b441-e47bc531a2cc.igs" />
+    <None Include="Library\Template\Static\f33e831b-68ae-42ff-8343-c92bc4c580e7.igs" />
+    <None Include="Library\Template\Static\f37cc45a-688c-4aef-b2ab-17c4e060b062.igs" />
+    <None Include="Library\Template\Static\f3a87294-6970-416b-a19c-cd4e61a011c9.igs" />
+    <None Include="Library\Template\Static\f3aca737-e3d1-4d43-a796-ceaea5a72108.igs" />
+    <None Include="Library\Template\Static\f3d8fd23-e7f4-4547-9fcc-1f514404316d.igs" />
+    <None Include="Library\Template\Static\f47e2bce-bcd7-4819-a924-b8cfef713543.igs" />
+    <None Include="Library\Template\Static\f51cdd5c-fe65-40ba-a86f-6e36cb606985.igs" />
+    <None Include="Library\Template\Static\f5a31355-d3f8-4bd0-a5b8-45f12e734aa1.igs" />
+    <None Include="Library\Template\Static\f5be4b4c-d47a-48e2-84bb-41b5cad692ef.igs" />
+    <None Include="Library\Template\Static\f5d70adb-0b95-44ce-a518-0e4712c6bd4b.igs" />
+    <None Include="Library\Template\Static\f5e00d1a-ebd8-4c64-b0c4-cf9cea5557ad.igs" />
+    <None Include="Library\Template\Static\f6a44e2b-bcd4-4b56-8bff-05c1ed8d91a4.igs" />
+    <None Include="Library\Template\Static\f6bce98e-697b-401b-8a20-8a8e051b9295.igs" />
+    <None Include="Library\Template\Static\f7bf0606-8b2a-45a5-ac9a-c9c84444cea5.igs" />
+    <None Include="Library\Template\Static\f822b2a9-f05b-493d-8a0c-f3ad51d0b3ce.igs" />
+    <None Include="Library\Template\Static\f8579837-3baa-484c-8e90-f5d2e72d6f37.igs" />
+    <None Include="Library\Template\Static\f8c341d3-de7a-4f43-930f-eb41c6953088.igs" />
+    <None Include="Library\Template\Static\f9e70544-f0b7-47d5-ba0d-8fd43d3eac4e.igs" />
+    <None Include="Library\Template\Static\fa9f63f4-b85f-4168-8c0b-823bbfd796c9.igs" />
+    <None Include="Library\Template\Static\fabbebf0-33c0-4a01-a9de-bf83bb01ad43.igs" />
+    <None Include="Library\Template\Static\fb6e5f4d-2ecc-4109-93c8-378412416106.igs" />
+    <None Include="Library\Template\Static\fb71a898-94b8-4e2c-ba6b-6ba568259232.igs" />
+    <None Include="Library\Template\Static\fb931197-00d1-4411-b2c2-2f529a587931.igs" />
+    <None Include="Library\Template\Static\fba2d44e-b38f-4628-8ab6-2e76286ccaeb.igs" />
+    <None Include="Library\Template\Static\fbc76ced-187c-4466-ac79-2ba27647ac1c.igs" />
+    <None Include="Library\Template\Static\fbe908a8-46bb-44c6-b26b-9b345686927e.igs" />
+    <None Include="Library\Template\Static\fc6d98bc-c952-45b7-acf8-e5d75bea212b.igs" />
+    <None Include="Library\Template\Static\fc8c3fe6-907c-4366-a701-3680ba55909e.igs" />
+    <None Include="Library\Template\Static\fcbe4fb3-1d20-431b-bd0b-9189f014f70e.igs" />
+    <None Include="Library\Template\Static\fcccd079-7c5f-4dba-91c3-9825854ecbe9.igs" />
+    <None Include="Library\Template\Static\fcf56225-d5e6-4595-bf58-4844d2a2c6b5.igs" />
+    <None Include="Library\Template\Static\fd82abd1-c684-4f2e-8bee-385e336ad0c1.igs" />
+    <None Include="Library\Template\Static\fd93f381-7dc7-4ffe-8a8b-1e59b305a66f.igs" />
+    <None Include="Library\Template\Static\fd968981-ef44-45b6-ab4e-a7eba97ea8a6.igs" />
+    <None Include="Library\Template\Static\fdca3316-0a2c-4a34-a5b4-90c9b86f22b0.igs" />
+    <None Include="Library\Template\Static\fde81077-634b-4431-8c73-7fb604899249.igs" />
+    <None Include="Library\Template\Static\fe934a8c-6371-400c-99b1-198b2dd1d3e0.igs" />
+    <None Include="Library\Template\Static\fec9cfc3-6d40-4476-8ba2-2b9190da5c49.igs" />
+    <None Include="Library\Template\Static\ffb79b1b-b0dc-4b95-aacb-3bd9d9119876.igs" />
+    <None Include="Library\Template\Static\ffcf0b8d-562e-4e08-ae7d-ae92dac4b273.igs" />
+    <None Include="Library\Template\Static\ffe30bc9-145d-4c58-a41d-1a7dd266e404.igs" />
+    <None Include="Library\Template\Static\fffbd059-225b-46f5-8d43-37f6a430867b.igs" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrepUtility\BrepUtil.vbproj">
+      <Project>{0d9ba3f4-16d8-4a4b-8208-27b4b2594740}</Project>
+      <Name>BrepUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM\ORM.vbproj">
+      <Project>{5ba2fb04-97c0-41de-8297-5fd9081550ce}</Project>
+      <Name>ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RhinocerosUtilsR6\RhinoUtilsR6.vbproj">
+      <Project>{d2112ca4-bf43-40b8-8c43-6aa45d3bbf75}</Project>
+      <Name>RhinoUtilsR6</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\Addiction\AA__note sui file.txt" />
+    <Content Include="UI\loader.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

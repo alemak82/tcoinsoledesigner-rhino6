@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="BASE_FILE_TEST_DIR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\OneDrive - enhance holistic functionalities\Lupin\LAVORO\MakkioSoft\CLIENTI\Duna\Insole Designer\file test\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

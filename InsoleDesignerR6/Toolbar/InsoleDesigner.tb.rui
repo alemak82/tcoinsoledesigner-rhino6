@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RhinoUI major_ver="2" minor_ver="0" guid="e36dfb0d-f2f6-4fc1-be79-b2caf3aabcd4" localize="False" default_language_id="1033">
+  <extend_rhino_menus>
+    <menu guid="d58ceae7-fdb0-4104-80da-274b94ad44a9">
+      <text>
+        <locale_1033>Extend Rhino Menus</locale_1033>
+      </text>
+    </menu>
+  </extend_rhino_menus>
+  <menus />
+  <tool_bar_groups>
+    <tool_bar_group guid="18cbcfd6-5f11-41c2-a6b7-ea812f2ef303" dock_bar_guid32="65b1cb2e-c3bf-419a-8ece-edd6f97809bb" dock_bar_guid64="00000000-0000-0000-0000-000000000000" active_tool_bar_group="d0f470c7-e162-4285-8e47-68c865fe3f3e" single_file="False" hide_single_tab="False" point_floating="1254,112">
+      <text>
+        <locale_1033>ID Viste</locale_1033>
+      </text>
+      <tool_bar_group_item guid="d0f470c7-e162-4285-8e47-68c865fe3f3e" major_version="1" minor_version="1">
+        <text>
+          <locale_1033>ID Viste</locale_1033>
+        </text>
+        <tool_bar_id>09b762b5-1122-41a6-ba80-d7d517a7e8aa</tool_bar_id>
+      </tool_bar_group_item>
+      <dock_bar_info dock_bar="False" docking="True" horz="False" visible="False" floating="False" mru_float_style="8192" bar_id="59457" mru_width="32767" point_pos="0,110" float_point="1254,112" rect_mru_dock_pos="0,110,1366,148" dock_location_u="59419" dock_location="top" float_size="56,58" />
+    </tool_bar_group>
+  </tool_bar_groups>
+  <tool_bars>
+    <tool_bar guid="09b762b5-1122-41a6-ba80-d7d517a7e8aa" bitmap_id="02fe5d7a-c386-4807-a1b2-94a86a216a17" item_display_style="control_only">
+      <text>
+        <locale_1033>ID Viste</locale_1033>
+      </text>
+      <tool_bar_item guid="13a16894-4882-4481-8630-6a40ec2dcc71" button_display_mode="control_only" button_style="normal">
+        <text>
+          <locale_1033>Toolbar item</locale_1033>
+        </text>
+        <left_macro_id>b1d9f88a-24e2-4899-8149-13afc601b474</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="df2b496c-9d9d-400e-a5ef-888f0c55f54b" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>344bb948-a866-45d7-b9f1-65695c625600</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="b0d2aa83-f24e-46a8-995e-a53eb69d83d7" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>fff3d682-0ae5-4ba8-a494-2b876ac69040</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="3fdeab1d-bead-47ea-ba9a-7b03bf16f345" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>fe764052-e7b0-421c-8c03-09b2ff0ee8be</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="62f77400-1062-4ec5-b940-dcc1177fd9cb" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>0ebaa7a9-f40f-43e4-80a9-f02d88284f55</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="91184631-bcc6-4ec9-a5fc-b6ace90c09d9" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>bae8ae42-c2d5-4985-8cc7-b41b169aef78</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="e057c9a4-fad3-42b6-b24c-92ea4b5ab7d3" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>964b4499-5878-4cb6-9460-5c3400df0e60</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="c61902a8-e121-470e-9a9c-9da221b02c81" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>aea49dba-e18d-44e5-9d49-f5e16d6b1c55</left_macro_id>
+      </tool_bar_item>
+      <tool_bar_item guid="86328813-198d-4e5b-b25b-32afbdd56caf" button_display_mode="control_only" button_style="normal">
+        <text />
+        <left_macro_id>a298284a-cfba-4475-90b0-aa4aba144630</left_macro_id>
+        <right_macro_id>45748614-28aa-494f-9c85-1086dd51482a</right_macro_id>
+      </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+    <macro_item guid="b1d9f88a-24e2-4899-8149-13afc601b474" bitmap_id="25157941-12f2-4441-9f0f-0024e3c83f2f">
+      <text>
+        <locale_1033>Macro</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>4 viste</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>4 viste</locale_1033>
+      </button_text>
+      <script>'_Id4Views</script>
+    </macro_item>
+    <macro_item guid="344bb948-a866-45d7-b9f1-65695c625600" bitmap_id="3b7a42e1-29e7-440d-b409-1b979351fbf3">
+      <text>
+        <locale_1033>Macro 00</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Perspective View</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Perspective View</locale_1033>
+      </button_text>
+      <script>'_IdView _P</script>
+    </macro_item>
+    <macro_item guid="fff3d682-0ae5-4ba8-a494-2b876ac69040" bitmap_id="1e97530a-bbbc-43e8-a700-fe7ae8391924">
+      <text>
+        <locale_1033>Macro 01</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Top View</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Top View</locale_1033>
+      </button_text>
+      <script>'_IdView _S</script>
+    </macro_item>
+    <macro_item guid="fe764052-e7b0-421c-8c03-09b2ff0ee8be" bitmap_id="9f73e638-f4cf-4531-9c8a-007a84059393">
+      <text>
+        <locale_1033>Macro 02</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Bottom View</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Bottom View</locale_1033>
+      </button_text>
+      <script>'_IdView _O</script>
+    </macro_item>
+    <macro_item guid="0ebaa7a9-f40f-43e4-80a9-f02d88284f55" bitmap_id="28247569-181e-4736-94c5-d6f86c07d75a">
+      <text>
+        <locale_1033>Macro 03</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Vista laterale</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Vista laterale</locale_1033>
+      </button_text>
+      <script>'_IdView _E</script>
+    </macro_item>
+    <macro_item guid="bae8ae42-c2d5-4985-8cc7-b41b169aef78" bitmap_id="269454f0-888f-4289-ad69-cb80f9757f23">
+      <text>
+        <locale_1033>Macro 04</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Vista laterale</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Vista laterale</locale_1033>
+      </button_text>
+      <script>'_IdView _I</script>
+    </macro_item>
+    <macro_item guid="964b4499-5878-4cb6-9460-5c3400df0e60" bitmap_id="69b7fceb-908d-428d-a33f-e6566eca594d">
+      <text>
+        <locale_1033>Macro 05</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Vista anteriore</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Vista anteriore</locale_1033>
+      </button_text>
+      <script>'_IdView _A</script>
+    </macro_item>
+    <macro_item guid="aea49dba-e18d-44e5-9d49-f5e16d6b1c55" bitmap_id="a53652d5-6ce8-46d8-bea8-40bfb1128dd7">
+      <text>
+        <locale_1033>Macro 06</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Vista posteriore</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Vista posteriore</locale_1033>
+      </button_text>
+      <script>'_IdView _D</script>
+    </macro_item>
+    <macro_item guid="a298284a-cfba-4475-90b0-aa4aba144630" bitmap_id="f204d722-1926-4164-8dfa-f318eb3ca6d2">
+      <text>
+        <locale_1033>Macro 07</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Mostra griglia</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Mostra griglia</locale_1033>
+      </button_text>
+      <script>'_IdViewGridON</script>
+    </macro_item>
+    <macro_item guid="45748614-28aa-494f-9c85-1086dd51482a" bitmap_id="a094c7a9-21e2-42b2-ac53-f984f6378ec0">
+      <text>
+        <locale_1033>Macro 08</locale_1033>
+      </text>
+      <tooltip>
+        <locale_1033>Nascondi griglia</locale_1033>
+      </tooltip>
+      <button_text>
+        <locale_1033>Mostra griglia</locale_1033>
+      </button_text>
+      <script>'_IdViewGridOFF</script>
+    </macro_item>
+  </macros>
+  <bitmaps>
+    <small_bitmap item_width="16" item_height="16">
+      <bitmap_item guid="02fe5d7a-c386-4807-a1b2-94a86a216a17" index="0" />
+      <bitmap_item guid="25157941-12f2-4441-9f0f-0024e3c83f2f" index="1" />
+      <bitmap_item guid="3b7a42e1-29e7-440d-b409-1b979351fbf3" index="2" />
+      <bitmap_item guid="1e97530a-bbbc-43e8-a700-fe7ae8391924" index="3" />
+      <bitmap_item guid="9f73e638-f4cf-4531-9c8a-007a84059393" index="4" />
+      <bitmap_item guid="28247569-181e-4736-94c5-d6f86c07d75a" index="5" />
+      <bitmap_item guid="269454f0-888f-4289-ad69-cb80f9757f23" index="6" />
+      <bitmap_item guid="69b7fceb-908d-428d-a33f-e6566eca594d" index="7" />
+      <bitmap_item guid="a53652d5-6ce8-46d8-bea8-40bfb1128dd7" index="8" />
+      <bitmap_item guid="f204d722-1926-4164-8dfa-f318eb3ca6d2" index="9" />
+      <bitmap_item guid="a094c7a9-21e2-42b2-ac53-f984f6378ec0" index="10" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAABAAAACwCAYAAAAG7+6PAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOvgAADr4B6kKxwAAAAHRJREFUaEPt0jEKwkAQBdC5uVpG8WTewniDtBZ+YQsNcWXR8j34hFmW
+P1ukevZVp13VrY3jFPyn4JCCaxu35dK5k0uyrM7eUs8nfkouLPne1+evae/YloIpmds4LhuOX7f0
+ZLsf6dcCAAAAAAAAAAAAgGFVDwp7ScFdol1WAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </small_bitmap>
+    <normal_bitmap item_width="24" item_height="24">
+      <bitmap_item guid="02fe5d7a-c386-4807-a1b2-94a86a216a17" index="0" />
+      <bitmap_item guid="25157941-12f2-4441-9f0f-0024e3c83f2f" index="1" />
+      <bitmap_item guid="3b7a42e1-29e7-440d-b409-1b979351fbf3" index="2" />
+      <bitmap_item guid="1e97530a-bbbc-43e8-a700-fe7ae8391924" index="3" />
+      <bitmap_item guid="9f73e638-f4cf-4531-9c8a-007a84059393" index="4" />
+      <bitmap_item guid="28247569-181e-4736-94c5-d6f86c07d75a" index="5" />
+      <bitmap_item guid="269454f0-888f-4289-ad69-cb80f9757f23" index="6" />
+      <bitmap_item guid="69b7fceb-908d-428d-a33f-e6566eca594d" index="7" />
+      <bitmap_item guid="a53652d5-6ce8-46d8-bea8-40bfb1128dd7" index="8" />
+      <bitmap_item guid="f204d722-1926-4164-8dfa-f318eb3ca6d2" index="9" />
+      <bitmap_item guid="a094c7a9-21e2-42b2-ac53-f984f6378ec0" index="10" />
+      <bitmap>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</bitmap>
+    </normal_bitmap>
+    <large_bitmap item_width="32" item_height="32">
+      <bitmap_item guid="02fe5d7a-c386-4807-a1b2-94a86a216a17" index="0" />
+      <bitmap_item guid="25157941-12f2-4441-9f0f-0024e3c83f2f" index="1" />
+      <bitmap_item guid="3b7a42e1-29e7-440d-b409-1b979351fbf3" index="2" />
+      <bitmap_item guid="1e97530a-bbbc-43e8-a700-fe7ae8391924" index="3" />
+      <bitmap_item guid="9f73e638-f4cf-4531-9c8a-007a84059393" index="4" />
+      <bitmap_item guid="28247569-181e-4736-94c5-d6f86c07d75a" index="5" />
+      <bitmap_item guid="269454f0-888f-4289-ad69-cb80f9757f23" index="6" />
+      <bitmap_item guid="69b7fceb-908d-428d-a33f-e6566eca594d" index="7" />
+      <bitmap_item guid="a53652d5-6ce8-46d8-bea8-40bfb1128dd7" index="8" />
+      <bitmap_item guid="f204d722-1926-4164-8dfa-f318eb3ca6d2" index="9" />
+      <bitmap_item guid="a094c7a9-21e2-42b2-ac53-f984f6378ec0" index="10" />
+      <bitmap>iVBORw0KGgoAAAANSUhEUgAAACAAAAFgCAYAAADaVXssAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOvgAADr4B6kKxwAAAAEJJREFUeF7twQEBAAAAgiD/r25IQAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAuRqxYAABfSvbugAAAABJRU5ErkJgggAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</bitmap>
+    </large_bitmap>
+  </bitmaps>
+  <scripts />
+</RhinoUI>

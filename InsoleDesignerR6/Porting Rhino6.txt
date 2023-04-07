@@ -1,0 +1,47 @@
+--------------------------------- OVUNQUE con tutte opzioni
+Imports Rh
+Imports RhinoUtils
+
+
+ThisPlugIn OKKIO A VOLTE VARIABILE PRIVATA!
+IdPlugIn.Instance() OPPURE IdPlugIn.ThisPlugIn()
+
+
+??? FORSE NON SERVE MA Doc DI RhAlias SI CONFONDE CON doc PASSATO AL COMANDO
+Doc.Redraw()
+doc.Views.Redraw()
+---------------------
+Doc.Add
+Doc.Objects.Add
+
+
+----------------------------------NEI COMANDI
+rimuovere dai comandi CommandUUID
+
+Public Overrides Function EnglishCommandName() As String
+    Return XXXXXXXXXXXXXXXXXXXXXXX
+End Function
+DIVENTA
+'''<returns>The command name as it appears on the Rhino command line.</returns>
+Public Overrides ReadOnly Property EnglishName() As String
+    Get
+        Return XXXXXXXXXXXXXXXXXXXXXXX
+    End Get
+End Property
+	
+
+
+Public Overrides Function RunCommand(ByVal context As IRhinoCommandContext) As IRhinoCommand.result
+Protected Overrides Function RunCommand(ByVal doc As RhinoDoc, ByVal mode As RunMode) As Result
+OPPURE
+Protected Overrides Function RunCommandNoDoc(mode As RunMode) As Result  
+
+
+Return IRhinoCommand.result.cancel
+Return Result.Cancel
+
+
+Return Result.Success
+Return IRhinoCommand.result.success
+
+

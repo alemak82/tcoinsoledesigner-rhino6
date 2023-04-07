@@ -1,0 +1,12 @@
+﻿NOTA:
+Per essere compatibile con LastDesigner la libreria RhinocerosUtils deve avere proprietà "Nome assembly" differenti. Es: RhinocerosUtils e Rh
+
+ACCESSO DB:
+Se non è installato Office 2010 bisogna installare AccessDatabaseEngine_X64.exe da qui https://www.microsoft.com/it-it/download/confirmation.aspx?id=13255
+
+TEST:
+Vanno fatti tutti a 64 bit quindi impostare nella Compilazione CPU di destinazione X64
+
+CONVENZIONI:
+L'asse del piede è lungo X positivo
+L'asse della gamba è lungo Z positivo

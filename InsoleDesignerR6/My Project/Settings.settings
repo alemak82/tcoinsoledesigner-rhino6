@@ -1,0 +1,58 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastLayerColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="InsoleLayerColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">63, 191, 191</Value>
+    </Setting>
+    <Setting Name="AddictionColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">0, 0, 191</Value>
+    </Setting>
+    <Setting Name="ManualManufactoringColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">DarkGray</Value>
+    </Setting>
+    <Setting Name="SottopiedeColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">0, 0, 191</Value>
+    </Setting>
+    <Setting Name="ProfiliTcoColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">255, 128, 0</Value>
+    </Setting>
+    <Setting Name="DistanceLeftRight" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">140</Value>
+    </Setting>
+    <Setting Name="DeltaFootCurveHeel" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="UseTcoScanner" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastHashSerial" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MappaPressioneColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightGray</Value>
+    </Setting>
+    <Setting Name="CamFooter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G00 Z50.0000
+G9
+M05
+M30</Value>
+    </Setting>
+    <Setting Name="CamHeader" Type="System.String" Scope="User">
+      <Value Profile="(Default)">o1
+$10k0
+M7
+M8
+G8 i3 p3 q2 e80
+S15000M03
+G00 Z50.000
+G01 X0.000 Y0.000 F2500</Value>
+    </Setting>
+    <Setting Name="PianiInclinatiColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">255, 127, 0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
